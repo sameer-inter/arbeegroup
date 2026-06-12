@@ -1,0 +1,1084 @@
+.build_sec
+    margin: 0
+    padding: 55px 0 15px
+    @media (max-width: 1779px)
+        padding-top: 30px
+    @media (max-width: 1551px)
+        padding-top: 20px
+    .title-wrp
+        margin: 0 0 70px
+        padding: 0
+        @media (max-width: 1779px)
+            margin-bottom: 55px
+        @media (max-width: 1551px)
+            margin-bottom: 45px
+        @media (max-width: 1199px)
+            margin-bottom: 35px
+        @media (max-width: 991px)
+            margin-bottom: 25px
+        .global_title
+            margin-bottom: 0
+            padding-right: 40px
+            @media (max-width: 1199px)
+                padding-right: 0
+            @media (max-width: 991px)
+                br
+                    display: none
+        p
+            font-weight: 300
+            margin-left: -40px
+            text-align: justify
+            font-size: 20px
+            @media (max-width: 1779px)
+                font-size: 16px
+            @media (max-width: 1551px)
+                margin-left: -50px
+                font-size: 14px
+            @media (max-width: 1199px)
+                margin-left: 0
+            &:last-of-type
+                margin-bottom: 0
+    .owl-nav
+        z-index: 4
+        @media (max-width: 991px)
+            display: none
+        button
+            height: 82px
+            width: 82px
+            background: linear-gradient(-90deg, #0089CF 0%, #A6CE39 100%) !important
+            @media (max-width: 1779px)
+                height: 68px
+                width: 68px
+            @media (max-width: 1551px)
+                height: 56px
+                width: 56px
+            @media (max-width: 1199px)
+                height: 42px
+                width: 42px
+            &:hover
+                &::after
+                    opacity: 0
+                &::before
+                    filter: brightness(0) invert(1)
+            &::before
+                background: url(../images/slider-arrow10x.svg) center center no-repeat
+                width: 10px
+                height: 18px
+                filter: none
+                left: 50%
+                transform: translate(-50%,-50%) rotate(180deg)
+                z-index: 1
+                transition: all 0.4s ease-in-out
+                background-size: 100% 100%
+                @media (max-width: 1551px)
+                    width: 8px
+                    height: 16px
+                @media (max-width: 1199px)
+                    height: 12px
+            &::after
+                content: ""
+                position: absolute
+                top: 1px
+                left: 1px
+                right: 1px
+                bottom: 1px
+                height: calc( 100% - 2px ) 
+                width: calc( 100% - 2px ) 
+                background: $white
+                border-radius: 50%
+                transition: all 0.4s ease-in-out
+            &.owl-next
+                transform: translateX(50%)
+            &.owl-prev
+                transform: translateX(-50%) rotate(180deg)
+    .slider
+        position: relative
+        &::before
+            content: ""
+            position: absolute
+            top: 0
+            left: 0
+            height: 100%
+            width: 165px
+            background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.98) 100%)
+            z-index: 3
+            @media (max-width: 1551px)
+                width: 115px
+            @media (max-width: 991px)
+                width: 70px
+            @media (max-width: 575px)
+                width: 40px
+        &::after
+            content: ""
+            position: absolute
+            top: 0
+            right: 0
+            height: 100%
+            width: 195px
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.98) 100%)
+            z-index: 3
+            @media (max-width: 1551px)
+                width: 140px
+            @media (max-width: 991px)
+                width: 100px
+            @media (max-width: 575px)
+                width: 70px
+    figure
+        margin: 0
+        padding: 0
+        height: 538px
+        border-radius: 22px
+        overflow: hidden
+        @media (max-width: 1779px)
+            height: 435px
+        @media (max-width: 1551px)
+            height: 360px
+            border-radius: 16px
+        @media (max-width: 1199px)
+            height: 300px
+            border-radius: 12px
+        @media (max-width: 991px)
+            border-radius: 10px
+            height: 240px
+        @media (max-width: 767px)
+            height: 180px
+        @media (max-width: 575px)
+            height: 130px
+        img
+            height: 100%
+            width: 100%
+            object-fit: cover
+            transition: all 1.5s cubic-bezier(0, 0, 0.2, 1)
+        &:hover
+            img
+                transform: scale3d(1.1, 1.1, 1.1)
+    .btns
+        margin-top: 70px
+        @media (max-width: 1779px)
+            margin-top: 55px
+        @media (max-width: 1551px)
+            margin-top: 45px
+        @media (max-width: 1199px)
+            margin-top: 35px
+        @media (max-width: 991px)
+            margin-top: 30px
+.career_sec
+    margin: 0
+    padding: 115px 0 160px
+    background: #D9F3FF
+    position: relative
+    z-index: 2
+    @media (max-width: 1779px)
+        padding: 95px 0 135px
+    @media (max-width: 1551px)
+        padding: 75px 0 100px
+    @media (max-width: 1199px)
+        padding: 50px 0 70px
+    @media (max-width: 991px)
+        padding: 40px 0 60px
+    @media (max-width: 767px)
+        padding: 30px 0 50px
+    &::before
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        height: 205px
+        width: 100%
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%)
+        z-index: -1
+    &::after
+        content: ""
+        position: absolute
+        bottom: 0
+        left: 0
+        height: 100px
+        width: 100%
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%)
+        z-index: -1
+    .title-wrp
+        margin: 0 auto 60px
+        padding: 0
+        max-width: 890px
+        @media (max-width: 1779px)
+            max-width: 760px
+            margin-bottom: 50px
+        @media (max-width: 1551px)
+            max-width: 700px
+            margin-bottom: 40px
+        @media (max-width: 1199px)
+            max-width: 640px
+            margin-bottom: 30px
+        @media (max-width: 991px)
+            max-width: 600px
+            margin-bottom: 25px
+        .global_title
+            @media (max-width: 1551px)
+                margin-bottom: 15px
+            @media (max-width: 575px)
+                margin-bottom: 12px
+        p
+            font-weight: 300
+            font-size: 20px
+            @media (max-width: 1779px)
+                font-size: 17px
+            @media (max-width:1551px)
+                font-size: 15px
+            @media (max-width:1199px)
+                font-size: 14px
+            &:last-of-type
+                margin-bottom: 0
+    .row
+        --bs-gutter-x: 22px
+        --bs-gutter-y: 22px
+        @media (max-width: 1779px)
+            --bs-gutter-y: 18px
+            --bs-gutter-x: 18px
+        @media (max-width: 1551px)
+            --bs-gutter-y: 15px
+            --bs-gutter-x: 15px
+        @media (max-width: 1199px)
+            --bs-gutter-y: 12px
+            --bs-gutter-x: 12px
+        @media (max-width: 991px)
+            --bs-gutter-y: 10px
+            --bs-gutter-x: 10px
+    .container
+        max-width: 1640px
+        @media (max-width: 1779px)
+            max-width: 1330px
+        @media (max-width: 1551px)
+            max-width: 1140px
+        @media (max-width: 1199px)
+            max-width: 970px
+        @media (max-width: 991px)
+            max-width: none
+.career-card
+    margin: 0
+    padding: 25px 25px 35px
+    background: $white
+    height: 100%
+    border-radius: 12px
+    transition: all .4s ease-in-out
+    @media (max-width: 1779px)
+        padding: 22px 22px 30px
+    @media (max-width: 1551px)
+        padding: 18px 16px 22px
+        border-radius: 8px
+    @media (max-width: 1199px)
+        padding: 15px 15px 20px
+    @media (max-width: 575px)
+        padding: 15px
+    &:hover
+        background: $basecolor
+        span
+            background: $white
+        h3,p
+            color: $white
+    span
+        margin: 0 0 58px
+        padding: 0
+        border-radius: 8px
+        background: #E6F4FA
+        transition: all .4s ease-in-out
+        display: inline-flex
+        justify-content: center
+        align-items: center
+        font-size: 25px
+        font-weight: 600
+        color: $basecolor
+        min-height: 60px
+        min-width: 62px
+        @media (max-width: 1779px)
+            font-size: 21px
+            min-height: 48px
+            min-width: 52px
+            margin-bottom: 48px
+        @media (max-width: 1551px)
+            min-height: 40px
+            min-width: 42px
+            margin-bottom: 38px
+            font-size: 18px
+            border-radius: 6px
+        @media (max-width: 1199px)
+            font-size: 16px
+            min-height: 32px
+            margin-bottom: 30px
+            min-width: 34px
+        @media (max-width: 991px)
+            min-height: 30px
+            margin-bottom: 25px
+            min-width: 32px
+            font-size: 14px
+    h3
+        margin: 0 0 10px
+        padding: 0
+        font-size: 24px
+        font-weight: 600
+        color: $titlecolor
+        transition: all .4s ease-in-out
+        @media (max-width: 1779px)
+            font-size: 20px
+        @media (max-width: 1551px)
+            font-size: 17px
+        @media (max-width: 1199px)
+            font-size: 16px
+        @media (max-width: 991px)
+            font-size: 15px
+        @media (max-width: 575px)
+            font-size: 14px
+    p
+        font-weight: 300
+        transition: all .4s ease-in-out
+        @media (max-width: 1779px)
+            font-size: 15px
+        @media (max-width: 1551px)
+            font-size: 13px
+        &:last-of-type
+            margin-bottom: 0
+.work_sec
+    margin: 0
+    padding: 0 0 100px
+    @media (max-width: 1779px)
+        padding-bottom: 80px
+    @media (max-width: 1551px)
+        padding-bottom: 60px
+    @media (max-width: 1199px)
+        padding-bottom: 30px
+    @media (max-width: 767px)
+        padding-bottom: 20px
+    .global_title
+        margin-bottom: 100px
+        @media (max-width: 1779px)
+            margin-bottom: 80px
+        @media (max-width: 1551px)
+            margin-bottom: 68px
+        @media (max-width: 1199px)
+            margin-bottom: 40px
+        @media (max-width: 767px)
+            margin-bottom: 30px
+        @media (max-width: 575px)
+            margin-bottom: 20px
+    .row
+        --bs-gutter-x: 0
+        --bs-gutter-y: 0
+        > 
+            div
+                &:nth-child(1)
+                    .work-box
+                        @media (min-width: 768px)
+                            border-radius: 10px 0 0 10px
+                            // @media (max-width: 767px)
+                            //     border-radius: 8px 0 0 0
+                            &::before 
+                                border-radius: 10px 0 0 10px
+                                // @media (max-width: 767px)
+                                //     border-radius: 8px 0 0 0
+                            &::after
+                                width: calc( 100% - 2px )
+                                left: 1px
+                                border-radius: 10px 0 0 10px
+                                // @media (max-width: 767px)
+                                //     height: calc(100% - 1px)
+                                //     border-radius: 8px 0 0 0
+                            &:hover
+                                &::before 
+                                    border-radius: 12px
+                                    @media (max-width: 1199px)
+                                        border-radius: 8px
+                                    // @media (max-width: 767px)
+                                    //     border-radius: 8px 0 0 0
+                // &:nth-child(2)
+                //     .work-box
+                //         @media (max-width: 767px)
+                //             border-radius: 0 8px 0 0
+                //             &::before
+                //                 border-radius: 0 8px 0 0
+                //             &::after
+                //                 border-radius: 0 8px 0 0
+                //                 height: calc(100% - 1px)
+                // &:nth-child(3)
+                //     .work-box
+                //         @media (max-width: 767px)
+                //             border-radius: 0 0 0 8px
+                //             &::before
+                //                 border-radius: 0 0 0 8px
+                //             &::after
+                //                 width: calc(100% - 2px)
+                //                 border-radius: 0 0 0 8px
+                //                 left: 1px
+                &:last-child
+                    .work-box
+                        @media (min-width: 768px)
+                            border-radius: 0 10px 10px 0
+                            // @media (max-width: 767px)
+                            //     border-radius: 0 0 8px 0
+                            &::before 
+                                border-radius: 0 10px 10px 0
+                                // @media (max-width: 767px)
+                                //     border-radius: 0 0 8px 0
+                            &::after
+                                border-radius: 0 10px 10px 0
+                                // @media (max-width: 767px)
+                                //     border-radius: 0 0 8px 0
+                            &:hover
+                                &::before 
+                                    border-radius: 12px
+                                    @media (max-width: 1199px)
+                                        border-radius: 8px
+                                    // @media (max-width: 767px)
+                                    //     border-radius: 0 0 8px 0
+                &:nth-child(4n + 1)
+                    .work-box
+                        @media (min-width: 768px)
+                            border-radius: 10px 0 0 10px
+                            // @media (max-width: 767px)
+                            //     border-radius: 8px 0 0 0
+                            &::before 
+                                border-radius: 10px 0 0 10px
+                                // @media (max-width: 767px)
+                                //     border-radius: 8px 0 0 0
+                            &::after
+                                width: calc( 100% - 2px )
+                                left: 1px
+                                border-radius: 10px 0 0 10px
+                                // @media (max-width: 767px)
+                                //     height: calc(100% - 1px)
+                                //     border-radius: 8px 0 0 0
+                &:nth-child(4n)
+                    @media (min-width: 768px)
+                        .work-box
+                            border-radius: 0 10px 10px 0
+                            @media (max-width: 767px)
+                                border-radius: 0 0 8px 0
+                            &::before 
+                                border-radius: 0 10px 10px 0
+                                @media (max-width: 767px)
+                                    border-radius: 0 0 8px 0
+                            &::after
+                                border-radius: 0 10px 10px 0
+                                @media (max-width: 767px)
+                                    border-radius: 0 0 8px 0
+                &:nth-child(n + 5)
+                    @media (min-width: 768px)
+                        .work-box
+                            &::after
+                                height: calc(100% - 1px)
+                                top: 0
+                &:nth-child(4n + 1)
+                    @media (max-width: 767px)
+                        .work-box
+                            border-radius: 8px 0 0 0
+                            &::before
+                                border-radius: 8px 0 0 0
+                            &::after
+                                border-radius: 8px 0 0 0
+                                width: calc(100% - 2px)
+                                left: 1px
+                &:nth-child(4n + 2)
+                    @media (max-width: 767px)
+                        .work-box
+                            border-radius: 0 8px 0 0
+                            &::before
+                                border-radius: 0 8px 0 0
+                            &::after
+                                border-radius: 0 8px 0 0
+                &:nth-child(4n + 3)
+                    @media (max-width: 767px)
+                        .work-box
+                            border-radius: 0 0 0 8px
+                            &::before
+                                border-radius: 0 0 0 8px
+                            &::after
+                                border-radius: 0 0 0 8px
+                                width: calc(100% - 2px)
+                                height: calc(100% - 1px)
+                                left: 1px
+                                top: 0
+                &:nth-child(4n)
+                    @media (max-width: 767px)
+                        .work-box
+                            border-radius: 0 0 8px 0
+                            &::before
+                                border-radius: 0 0 8px 0
+                            &::after
+                                border-radius: 0 0 8px 0
+                                height: calc(100% - 1px)
+                                top: 0
+
+.work-box
+    margin: 0
+    padding: 50px 35px
+    height: 100%
+    position: relative
+    z-index: 2
+    background: $gradient
+    transition: all .4s ease-in-out
+    @media (max-width: 1779px)
+        padding: 38px 30px
+    @media (max-width: 1551px)
+        padding: 32px 25px
+    @media (max-width: 1199px)
+        padding: 25px 20px
+    @media (max-width: 991px)
+        padding: 20px 15px
+    &:hover
+        background: $white
+        margin-left: -1px
+        z-index: 3
+        @media (max-width: 767px)
+            margin-left: 0
+        &::before
+            transform: scaleY(1.2)
+            border-radius: 12px
+            opacity: 1
+            @media (max-width: 1199px)
+                border-radius: 8px
+                transform: scaleY(1.15)
+            @media (max-width: 991px)
+                transform: scaleY(1.1)
+            @media (max-width: 767px)
+                transform: scaleY(1)
+        &::after
+            opacity: 0
+    &::before
+        content: ""
+        top: 0
+        left: 0
+        position: absolute
+        right: 0
+        bottom: 0
+        height: 100%
+        width: 100%
+        border-radius: 0
+        z-index: -1
+        opacity: 0
+        background: url(../images/work-box_bg.jpg) center center no-repeat
+        background-size: 100% 100%
+        transition: all .4s ease-in-out
+    &::after
+        content: ""
+        position: absolute
+        top: 1px
+        left: 0
+        right: 1px
+        bottom: 1px
+        height: calc( 100% - 2px )
+        width: calc( 100% - 1px )
+        border-radius: 0
+        z-index: -1
+        background: $white
+        opacity: 1
+        transition: all .4s ease-in-out
+    i
+        margin-bottom: 45px
+        display: flex
+        @media (max-width: 1779px)
+            max-height: 70px
+            margin-bottom: 40px
+        @media (max-width: 1551px)
+            max-height: 54px
+            margin-bottom: 30px
+        @media (max-width: 1199px)
+            max-height: 45px
+            margin-bottom: 20px
+        @media (max-width: 991px)
+            max-height: 35px
+            margin-bottom: 15px
+        img
+            object-fit: contain
+            object-position: left top
+    h3
+        margin: 0 0 18px
+        padding: 0
+        font-size: 25px
+        font-weight: 600
+        color: $titlecolor
+        @media (max-width: 1779px)
+            font-size: 21px
+            margin-bottom: 14px
+        @media (max-width: 1551px)
+            font-size: 18px
+            margin-bottom: 12px
+        @media (max-width: 1199px)
+            font-size: 16px
+            margin-bottom: 10px
+        @media (max-width: 991px)
+            font-size: 15px
+    p
+        font-weight: 300
+        @media (max-width: 1779px)
+            font-size: 15px
+        @media (max-width: 1551px)
+            font-size: 14px
+        @media (max-width: 1199px)
+            font-size: 13px
+        &:last-of-type
+            margin-bottom: 0
+.opportunity_sec
+    margin: 0
+    padding: 55px 0 120px
+    @media (max-width: 1779px)
+        padding: 45px 0 100px
+    @media (max-width: 1551px)
+        padding: 40px 0 80px
+    @media (max-width: 1199px)
+        padding: 30px 0 60px
+    @media (max-width: 767px)
+        padding: 30px 0 40px
+    .title-wrp
+        margin: 0 0 35px
+        max-width: 750px
+        @media (max-width: 1779px)
+            margin-bottom: 30px
+            max-width: 650px
+        @media (max-width: 1551px)
+            max-width: 550px
+        @media (max-width: 1199px)
+            max-width: 500px
+        @media (max-width: 991px)
+            max-width: 100%
+            margin-bottom: 20px
+        @media (max-width: 575px)
+            margin-bottom: 10px
+        .global_title
+            margin-bottom: 18px
+            @media (max-width: 1199px)
+                margin-bottom: 12px
+        p
+            font-weight: 300
+            font-size: 20px
+            @media (max-width: 1779px)
+                font-size: 17px
+            @media (max-width:1551px)
+                font-size: 15px
+            @media (max-width:1199px)
+                font-size: 14px
+            &:last-of-type
+                margin-bottom: 0
+    .job-itm
+        margin: 0
+        padding: 48px 0
+        @media (max-width: 1779px)
+            padding: 38px 0
+        @media (max-width: 1551px)
+            padding: 34px 0
+        @media (max-width: 1199px)
+            padding: 28px 0
+        @media (max-width: 991px)
+            padding: 25px 0
+        +
+            .job-itm
+                border-top: 1px solid rgba(134, 134, 134, 0.4)
+        .itm-lft
+            margin: 0
+            padding: 0
+            @media (max-width: 1551px)
+                margin-right: -20px
+            @media (max-width: 991px)
+                margin: 0 0 15px
+            @media (max-width: 767px)
+                margin: 0 0 10px
+            h3
+                margin: 0 0 12px
+                padding: 0
+                font-size: 24px
+                font-weight: 500
+                color: #022F53
+                @media (max-width: 1779px)
+                    margin-bottom: 10px
+                    font-size: 19px
+                @media (max-width: 1551px)
+                    font-size: 16px
+            .location
+                display: flex
+                gap: 8px
+                align-items: center
+                @media (max-width: 1551px)
+                    gap: 5px
+                i
+                    display: flex
+                    width: 15px
+                    min-width: 15px
+                    @media (max-width: 1779px)
+                        width: 13px
+                        min-width: 13px
+                    @media (max-width: 1551px)
+                        width: 12px
+                        min-width: 12px
+                span
+                    font-size: 16px
+                    font-weight: 300
+                    color: $text
+                    @media (max-width: 1779px)
+                        font-size: 14px
+                    @media (max-width: 1551px)
+                        font-size: 13px
+        .job-dtl
+            margin: 0
+            padding: 0 0 0 120px
+            @media (max-width: 1779px)
+                padding-left: 70px
+            @media (max-width: 1551px)
+                padding-left: 60px
+            @media (max-width: 1199px)
+                padding-left: 20px
+            @media (max-width: 991px)
+                padding-left: 0
+            .job-tag
+                margin: 0 0 25px
+                display: flex
+                gap: 10px
+                flex-wrap: wrap
+                @media (max-width: 1779px)
+                    margin-bottom: 20px
+                @media (max-width: 1551px)
+                    gap: 7px
+                    margin-bottom: 15px
+                span
+                    padding: 3px 18px
+                    font-size: 15px
+                    font-weight: 400
+                    color: $text
+                    border: 1px solid rgba(164, 164, 164, 0.75)
+                    border-radius: 15px
+                    transition: all .4s ease-in-out
+                    @media (max-width: 1779px)
+                        padding: 2px 15px
+                        font-size: 13px
+                    @media (max-width: 1551px)
+                        padding: 2px 13px
+                        font-size: 12px
+                    &:hover
+                        border-color: $text
+                        background: $text
+                        color: $white
+            p
+                font-weight: 300
+                @media (max-width: 1779px)
+                    font-size: 15px
+                @media (max-width: 1551px)
+                    font-size: 14px
+    .enquiry
+        margin: 50px 0 0
+        font-weight: 300
+        font-size: 20px
+        @media (max-width: 1779px)
+            margin-top: 40px
+            font-size: 17px
+        @media (max-width: 1551px)
+            font-size: 15px
+            margin-top: 30px
+        @media (max-width: 1199px)
+            font-size: 14px
+            margin-top: 15px
+        @media (max-width: 767px)
+            margin-top: 10px
+        @media (max-width: 575px)
+            margin-top: 0
+        a
+            color: $basecolor
+            &:hover
+                color: $text
+                text-decoration: underline
+.careers-modal
+    background: rgba($black, 38%)
+    .modal-body
+        padding: 0
+    h3
+        margin: 0 0 12px
+        padding: 0
+        font-size: 50px
+        font-weight: 600
+        color: $titlecolor
+        @media (max-width: 1779px)
+            font-size: 42px
+        @media (max-width: 1551px)
+            font-size: 34px
+        @media (max-width: 1199px)
+            font-size: 30px
+        @media (max-width: 991px)
+            font-size: 24px
+        @media (max-width: 767px)
+            font-size: 20px
+            margin-bottom: 8px
+    .btn-close
+        height: 22px
+        width: 22px
+        padding: 0
+        filter: brightness(0)
+        position: absolute
+        top: -22px
+        right: -12px
+        opacity: 1
+        box-shadow: none
+        @media (max-width: 1551px)
+            top: -17px
+            right: -7px
+        @media (max-width: 991px)
+            top: -12px
+            right: -10px
+        @media (max-width: 767px)
+            top: -5px
+            right: -5px
+        @media (max-width: 575px)
+            right: -3px
+            height: 18px
+            width: 18px
+    p
+        font-weight: 300
+        &:last-of-type
+            margin-bottom: 40px
+            @media (max-width: 1779px)
+                margin-bottom: 35px
+            @media (max-width: 1551px)
+                margin-bottom: 30px
+            @media (max-width: 1199px)
+                margin-bottom: 25px
+            @media (max-width: 767px)
+                margin-bottom: 20px
+    .d-flex
+        gap: 15px
+        @media (max-width: 767px)
+            gap: 10px
+        .btns
+            flex: 1 0 auto
+            &.txt-bdr
+                background: transparent
+                border: 1px solid rgba($text, 50%)
+                &::before
+                    background: rgba($text, 50%)
+                &:hover
+                    color: $white
+    .row
+        --bs-gutter-x: 15px
+        --bs-gutter-y: 15px
+        @media (max-width: 1551px)
+            --bs-gutter-x: 10px
+            --bs-gutter-y: 10px
+    .form-group
+        .input-group 
+            .form-control
+                background: rgba(224, 224, 224, 0.37)
+                border: 1px solid rgba(224,224,224,.37)
+                &:focus
+                    border-color: $black
+                &.in-flg
+                    padding-left: 113px !important
+                    @media (max-width: 767px)
+                        padding-left: 100px !important
+        &.file
+            height: 140px
+            @media (max-width: 1779px)
+                height: 110px
+            @media (max-width: 1551px)
+                height: 95px
+            @media (max-width: 1199px)
+                height: 80px
+            @media (max-width: 767px)
+                height: 70px
+            .form-control
+                background: transparent
+            input[type="file"]
+                border: 1px dashed rgba(224,224,224,.37)
+                position: absolute
+                top: 0
+                height: 100%
+                font-size: 0
+                background: transparent
+                &:focus
+                    border-color: $black
+                &:hover
+                    border-color: $black
+            input[type="file"]::-webkit-file-upload-button, input[type="file"]::file-selector-button
+                display: none
+    .upload-btn
+        border-radius: 6px
+        background: rgba(224, 224, 224, 0.37)
+        width: 100%
+        height: 140px
+        padding: 20px
+        justify-content: center
+        align-items: center
+        display: flex
+        flex-wrap: wrap
+        cursor: pointer
+        position: relative
+        @media (max-width: 1779px)
+            height: 110px
+        @media (max-width: 1551px)
+            padding: 10px
+            height: 95px
+        @media (max-width: 1199px)
+            height: 80px
+        @media (max-width: 767px)
+            height: 70px
+        img
+            @media (max-width: 1779px)
+                width: 24px
+            @media (max-width: 1551px)
+                width: 22px
+            @media (max-width: 1199px)
+                width: 18px
+                margin-bottom: 5px
+        span
+            font-size: 16px
+            font-weight: 300
+            color: rgba($black, 50%)
+            display: block
+            text-align: center
+            line-height: 1.4
+            width: 100%
+            @media (max-width: 1779px)
+                font-size: 14px
+            @media (max-width: 1551px)
+                font-size: 13px
+            @media (max-width: 991px)
+                br
+                    display: none
+    .modal-dialog
+        max-width: 1235px
+        @media (max-width: 1779px)
+            max-width: 1000px
+        @media (max-width: 1551px)
+            max-width: 840px
+        @media (max-width: 1199px)
+            max-width: 740px
+        @media (max-width: 991px)
+            max-width: 640px
+        @media (max-width: 767px)
+            max-width: 540px
+    .modal-content
+        padding: 80px 90px 100px
+        background: $white
+        @media (max-width: 1779px)
+            padding: 65px 70px 80px
+        @media (max-width: 1551px)
+            padding: 55px 60px 70px
+        @media (max-width: 1199px)
+            padding: 40px
+        @media (max-width: 991px)
+            padding: 30px
+        @media (max-width: 767px)
+            padding: 20px
+        @media (max-width: 575px)
+            padding: 20px 15px
+    .form-group
+        .file
+            margin: 0
+            padding: 0 14px 0 24px
+            height: 68px
+            background-color: rgba($white , 5%)
+            border-radius: 8px !important
+            border: 1px solid rgba($white , 42%)
+            font-size: 20px
+            font-weight: 600
+            color: $white
+            display: flex
+            flex-wrap: nowrap
+            align-items: center
+            justify-content: space-between
+            cursor: pointer
+            gap: 25px
+            @media (max-width:1779px)
+                gap: 20px
+                padding: 0 12px 0 20px
+                height: 56px
+                font-size: 17px
+            @media (max-width:1551px)
+                font-size: 14px
+                height: 46px
+                padding: 0 10px 0 15px
+                border-radius: 6px !important
+            @media (max-width:1199px)
+                padding: 0 8px 0 12px
+                height: 40px
+                gap: 10px
+            @media (max-width:767px)
+                padding: 0 5px 0 10px
+                height: 36px
+            &::placeholder
+                color: $white
+                font-size: 20px
+                font-weight: 600
+                @media (max-width:1551px)
+                    font-size: 14px
+            &:focus
+                border-color: $white
+            input
+                &[type="file"]
+                    display: none
+            .upload-text
+                display: flex
+                justify-content: space-between
+                width: 100%
+                pointer-events: none
+                align-items: center
+                strong
+                    display: block
+                    font-size: 20px
+                    font-weight: 600
+                    color: $white
+                    line-height: normal
+                    @media (max-width:1779px)
+                        font-size: 17px
+                    @media (max-width:1551px)
+                        font-size: 14px
+                span
+                    display: block
+                    font-size: 17px
+                    line-height: normal
+                    font-weight: 400
+                    color: rgba($white, 0.7)
+                    @media (max-width:1779px)
+                        font-size: 15px
+                    @media (max-width:1199px)
+                        font-size: 14px
+                    @media (max-width:767px)
+                        font-size: 13px
+                    @media (max-width:575px)
+                        max-width: 100px
+                        white-space: nowrap
+                        overflow: hidden
+            .upload-btn
+                padding: 10px 24px 10px 19px
+                display: flex
+                align-items: center
+                gap: 15px
+                font-size: 20px
+                font-weight: 400
+                color: $white
+                cursor: pointer
+                min-width: 180px
+                background: #015F9C
+                white-space: nowrap
+                border-radius: 10px !important
+                @media (max-width:1779px)
+                    font-size: 18px
+                    gap: 12px
+                    min-width: 155px
+                    padding: 8px 20px 8px 14px
+                @media (max-width:1551px)
+                    border-radius: 6px !important
+                    padding: 6px 15px 6px 12px
+                    font-size: 14px
+                    min-width: 120px
+                    gap: 10px
+                @media (max-width:1199px)
+                    gap: 8px
+                    min-width: 105px
+                    font-size: 13px
+                @media (max-width:767px)
+                    border-radius: 4px !important
+                    min-width: 84px
+                    padding: 4px 10px
+                img
+                    width: 24px
+                    @media (max-width:1779px)
+                        width: 21px
+                    @media (max-width:1551px)
+                        width: 16px
+                    @media (max-width:1199px)
+                        width: 14px
+                    @media (max-width:767px)
+                        display: none

@@ -1,0 +1,500 @@
+#return-to-top
+    position: fixed
+    bottom: 30px
+    right: 28px
+    background: $basecolor
+    width: 40px
+    height: 40px
+    font-size: 18px
+    line-height: 40px
+    color: $black
+    border-radius: 40px
+    text-decoration: none
+    text-align: center
+    transition: all 0.4s ease-in-out
+    z-index: 5
+    @media (max-width:1551px)
+        right: 20px
+    @media (max-width:1199px)
+        height: 35px
+        width: 35px
+        line-height: 35px
+    @media (max-width:991px)
+        right: 15px
+    @media (max-width:767px)
+        bottom: 60px
+        right: 5px
+    &:hover
+        span
+            transform: translate(0px, 0px) rotate(-90deg)
+    span
+        transform: translate(0px, 0px) rotate(-90deg)
+        transition: all .6s ease-in-out
+        display: flex
+        justify-content: center
+        align-items: center
+        filter: brightness(0) invert(1)
+.footer_sec
+    margin: 0
+    padding: 100px 0 50px
+    background: $black
+    position: relative
+    @media (max-width:1779px)
+        padding: 85px 0 42px
+    @media (max-width:1551px)
+        padding: 68px 0 35px
+    @media (max-width:1199px)
+        padding: 60px 0 30px
+    @media (max-width: 991px)
+        padding: 50px 0 20px
+    @media (max-width: 767px)
+        padding: 40px 0 20px
+    .ftr-top
+        margin: 0
+        padding: 0 0 85px
+        border-bottom: 1px solid
+        border-image: linear-gradient(90deg, rgba(0, 137, 207, 0.3) 0%, rgba(166, 206, 57, 0.3) 100%) 1
+        @media (max-width:1779px)
+            padding-bottom: 70px
+        @media (max-width:1551px)
+            padding-bottom: 58px
+        @media (max-width:1199px)
+            padding-bottom: 40px
+        @media (max-width: 767px)
+            padding-bottom: 25px
+        .ftr-card
+            margin: 0
+            padding: 1px
+            background: linear-gradient(0deg, #091C3A 0%, #A6CE39 100%)
+            border-radius: 10px
+            height: 100%
+            @media (max-width:1199px)
+                border-radius: 8px
+            &:hover
+                .card-in
+                    i
+                        background: $basecolor2
+                        img
+                            transform: rotateY(360deg)
+                            filter: brightness(0)
+            .card-in
+                margin: 0
+                padding: 27px 22px
+                background: $black
+                display: flex
+                gap: 30px
+                align-items: center
+                border-radius: 9px
+                height: 100%
+                @media (max-width:1779px)
+                    padding: 22px 20px
+                    gap: 20px
+                @media (max-width:1551px)
+                    gap: 15px
+                    padding: 20px 15px
+                @media (max-width:1199px)
+                    gap: 12px
+                    border-radius: 7px
+                    padding: 15px 12px
+                @media (max-width:380px)
+                    padding: 15px 10px
+                i
+                    height: 84px
+                    width: 84px
+                    min-width: 84px
+                    border-radius: 50%
+                    background: #141414
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    transition: all .4s ease-in-out
+                    @media (max-width:1779px)
+                        height: 68px
+                        width: 68px
+                        min-width: 68px
+                    @media (max-width:1551px)
+                        height: 56px
+                        width: 56px
+                        min-width: 56px
+                    @media (max-width:1199px)
+                        height: 46px
+                        width: 46px
+                        min-width: 46px
+                    @media (max-width:575px)
+                        height: 42px
+                        width: 42px
+                        min-width: 42px
+                    img
+                        transition: all .6s ease-in-out
+                        @media (max-width:1779px)
+                            width: 44px
+                        @media (max-width:1551px)
+                            width: 38px
+                        @media (max-width:1199px)
+                            width: 30px
+                        @media (max-width:575px)
+                            width: 26px
+                span
+                    font-size: 24px
+                    font-weight: 400
+                    color: $white
+                    transition: all .4s ease-in-out
+                    @media (max-width:1779px)
+                        font-size: 19px
+                    @media (max-width:1551px)
+                        font-size: 17px
+                    @media (max-width:1199px)
+                        font-size: 15px
+                    @media (max-width: 991px)
+                        font-size: 14px
+        .row
+            --bs-gutter-x: 38px
+            @media (max-width:1779px)
+                --bs-gutter-x: 30px
+            @media (max-width:1551px)
+                --bs-gutter-x: 20px
+            @media (max-width:1199px)
+                --bs-gutter-x: 12px
+            @media (max-width: 991px)
+                --bs-gutter-x: 10px
+    .ftr-mdl
+        margin: 0
+        padding: 95px 0 65px
+        position: relative
+        @media (max-width:1779px)
+            padding: 80px 0 58px
+        @media (max-width:1551px)
+            padding: 65px 0 45px
+        @media (max-width:1199px)
+            padding: 45px 0 35px
+        @media (max-width:991px)
+            padding: 40px 0 30px
+        @media (max-width:767px)
+            padding: 30px 0 20px
+        .curve
+            position: absolute
+            height: 376px
+            width: 368px
+            top: 50%
+            left: 185px
+            opacity: 0.03
+            pointer-events: none
+            transform: translateY(-50%)
+            @media (max-width:1779px)
+                height: 300px
+                width: 295px
+                left: 145px
+            @media (max-width:1551px)
+                height: 250px
+                width: 245px
+                left: 125px
+            @media (max-width:1199px)
+                height: 140px
+                width: 125px
+                left: 85px
+            @media (max-width: 991px)
+                display: none
+        .ftr-blk
+            +
+                .ftr-blk
+                    margin-top: 35px
+                    @media (max-width:1551px)
+                        margin-top: 25px
+            &.prod
+                .ftr_link
+                    li
+                        margin: 0 0 18px
+                        padding: 0
+                        font-size: 28px
+                        font-weight: 500
+                        color: rgba($white, 90%)
+                        @media (max-width:1779px)
+                            margin-bottom: 15px
+                            font-size: 23px
+                        @media (max-width:1551px)
+                            font-size: 18px
+                        @media (max-width:1199px)
+                            font-size: 16px
+                            margin-bottom: 10px
+                        @media (max-width:991px)
+                            font-size: 14px
+                        a
+                            color: rgba($white, 90%)
+                            &:hover
+                                color: $basecolor
+            p
+                margin: 0
+                font-size: 20px
+                font-weight: 300
+                color: rgba($white, 90%)
+                @media (max-width:1779px)
+                    font-size: 17px
+                @media (max-width:1551px)
+                    font-size: 14px
+                @media (max-width:1199px)
+                    font-size: 13px
+                @media (max-width:767px)
+                    br
+                        display: none
+                a
+                    color: rgba($white, 90%)
+                    &:hover
+                        color: $basecolor
+            .ftr_link
+                margin: 0
+                padding: 0
+                li
+                    margin: 0 0 15px
+                    padding: 0
+                    font-size: 20px
+                    font-weight: 300
+                    color: rgba($white, 90%)
+                    @media (max-width:1779px)
+                        font-size: 17px
+                        margin-bottom: 10px
+                    @media (max-width:1551px)
+                        font-size: 14px
+                        margin-bottom: 8px
+                    @media (max-width:1199px)
+                        font-size: 13px
+                    @media (max-width:767px)
+                        margin-bottom: 5px
+                    &.active
+                        color: $basecolor
+                        a
+                            color: $basecolor
+                    a
+                        color: rgba($white, 90%)
+                        &:hover, &.active
+                            color: $basecolor
+            .ftr_wrp
+                @media (max-width:767px)
+                    display: none
+                    margin: 0 0 20px
+                    padding: 0 20px
+            .navTitle
+                margin: 0 0 32px
+                padding: 0 0 0 20px
+                font-size: 18px
+                font-weight: 600
+                letter-spacing: 0.04em
+                position: relative
+                span
+                    background: linear-gradient(90deg, #0089CF 0%, #A6CE39 100%)
+                    -webkit-background-clip: text
+                    -webkit-text-fill-color: transparent
+                    background-clip: text
+                    display: inline-block
+                    text-fill-color: transparent
+                @media (max-width:1779px)
+                    font-size: 17px
+                    margin-bottom: 25px
+                @media (max-width:1551px)
+                    padding-left: 15px
+                    margin-bottom: 20px
+                    font-size: 15px
+                @media (max-width:1199px)
+                    margin-bottom: 15px
+                    font-size: 14px
+                @media (max-width:767px)
+                    font-size: 15px
+                    cursor: pointer
+                    &::after
+                        content: "+"
+                        position: absolute
+                        top: -1px
+                        right: 0
+                        transition: all .4s ease-in-out
+                        font-size: 20px
+                        color: $white
+                &.active
+                    @media (max-width:767px)
+                        &::after
+                            content: "-"
+                &::before
+                    content: ""
+                    height: 10px
+                    width: 10px
+                    border-radius: 50%
+                    position: absolute
+                    top: 6px
+                    left: 0
+                    background: linear-gradient(90deg, #0089CF 0%, #A6CE39 100%)
+                    @media (max-width:1779px)
+                        height: 9px
+                        width: 9px
+                    @media (max-width:1551px)
+                        height: 7px
+                        width: 7px
+                    @media (max-width:1199px)
+                        height: 6px
+                        width: 6px
+                        top: 5px
+                    @media (max-width:767px)
+                        top: 7px
+        .ftr-logo
+            margin: 0 0 20px
+            padding: 0 0 0 80px
+            @media (max-width:1779px)
+                padding-left: 40px
+            @media (max-width:1199px)
+                padding-left: 20px
+            @media (max-width:767px)
+                padding-left: 0
+            figure
+                margin: 0 0 20px
+                width: 170px
+                @media (max-width:1779px)
+                    width: 140px
+                @media (max-width:1551px)
+                    width: 120px
+                @media (max-width:1199px)
+                    width: 100px
+                @media (max-width:991px)
+                    width: 90px
+                    margin-bottom: 15px
+                @media (max-width:767px)
+                    width: 80px
+            p
+                font-weight: 300
+                color: rgba($white, 90%)
+                font-size: 20px
+                @media (max-width:1779px)
+                    font-size: 17px
+                @media (max-width:1551px)
+                    font-size: 14px
+                @media (max-width:1199px)
+                    font-size: 13px
+                &:last-of-type
+                    margin-bottom: 0
+    .ftr-brand
+        margin: 0
+        padding: 28px 0
+        border-bottom: 1px solid
+        border-top: 1px solid
+        border-image: linear-gradient(90deg, rgba(0, 137, 207, 0.3) 0%, rgba(166, 206, 57, 0.3) 100%) 1
+        display: flex
+        flex-wrap: wrap
+        gap: 20px 50px
+        align-items: center
+        @media (max-width:1551px)
+            padding: 24px 0
+        @media (max-width:1199px)
+            padding: 18px 0
+        @media (max-width:991px)
+            gap: 25px 30px
+            padding: 15px 0
+        .social
+            margin: 0
+            padding: 0
+            display: flex
+            gap: 40px
+            @media (max-width:1779px)
+                gap: 32px
+            @media (max-width:1551px)
+                gap: 25px
+            @media (max-width:1199px)
+                gap: 15px
+            @media (max-width:991px)
+                gap: 10px
+            @media (max-width:767px)
+                margin: 0 auto
+            a
+                display: flex
+                justify-content: center
+                align-items: center
+                height: 54px
+                width: 54px
+                border-radius: 50%
+                background: rgba($white, 8%)
+                @media (max-width:1779px)
+                    height: 46px
+                    width: 46px
+                @media (max-width:1551px)
+                    height: 40px
+                    width: 40px
+                @media (max-width:1199px)
+                    height: 36px
+                    width: 36px
+                @media (max-width:991px)
+                    height: 32px
+                    width: 32px
+                &:hover
+                    background: $white
+                    img
+                        filter: none
+                img
+                    filter: brightness(0) invert(1)
+                    transition: all .4s ease-in-out
+                    @media (max-width:1551px)
+                        width: 22px
+                    @media (max-width:1199px)
+                        width: 20px
+                    @media (max-width:991px)
+                        width: 17px
+        .brand-wrp
+            margin: 0 0 0 auto
+            display: flex
+            gap: 135px
+            align-items: center
+            flex-wrap: wrap
+            @media (max-width:1779px)
+                gap: 90px
+            @media (max-width:1551px)
+                gap: 60px
+            @media (max-width:1199px)
+                gap: 40px
+            @media (max-width:991px)
+                gap: 24px
+            @media (max-width:575px)
+                justify-content: center
+            figure
+                margin: 0
+                display: flex
+                @media (max-width:1779px)
+                    max-height: 68px
+                    max-width: 180px
+                @media (max-width:1551px)
+                    max-height: 58px
+                    max-width: 150px
+                @media (max-width:1199px)
+                    max-height: 50px
+                    max-width: 140px
+                @media (max-width:991px)
+                    max-height: 45px
+                    max-width: 118px
+                img
+                    object-fit: contain
+    .copyright
+        margin: 0
+        padding: 45px 0 0
+        display: flex
+        gap: 50px
+        justify-content: space-between
+        @media (max-width:1779px)
+            padding-top: 35px
+        @media (max-width:1551px)
+            padding-top: 28px
+        @media (max-width:1199px)
+            padding-top: 25px
+        @media (max-width:991px)
+            padding-top: 20px
+            display: block
+        p
+            margin: 0
+            color: $white
+            display: flex
+            gap: 10px
+            @media (max-width:991px)
+                justify-content: center
+                text-align: center
+            +
+                p
+                    @media (max-width:991px)
+                        margin-top: 10px
+            &.design
+                color: rgba($white, 80%)
+            a
+                color: $white
+                &:hover
+                    color: $basecolor

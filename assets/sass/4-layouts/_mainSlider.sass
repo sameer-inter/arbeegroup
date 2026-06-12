@@ -1,0 +1,222 @@
+// MAINSLIDER
+/************** ******* **************/
+/************* MAINSLIDER *************/
+/************** ******* **************/
+#MainBanner
+    --padd-y: 20px
+    width: 100%
+    height: auto
+    overflow: hidden
+    position: relative
+    z-index: 0
+    @media only screen and (min-width: 576px)
+        --padd-y: 40px
+    @media only screen and (min-width: 992px)
+        --padd-y: 80px
+    @media only screen and (min-width: 1551px)
+        --padd-y: 100px
+    @media only screen and (min-width: 1771px)
+        --padd-y: 130px
+    .carousel-item
+        height: 468px
+        // padding: calc(var(--header-y) + var(--padd-y)) 0 var(--padd-y) 0
+        position: relative
+        z-index: 0
+        @media only screen and (min-width: 576px)
+            height: var(--app-height)
+        @media only screen and (min-width: 992px)
+            min-height: 520px
+        @media only screen and (min-width: 1551px)
+            min-height: 576px
+        &::after
+            content: ''
+            position: absolute
+            z-index: -1
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            background: rgb(0,0,0)
+            background: linear-gradient(180deg, rgba($black,0) 60%, rgba($black,0.6) 100%)
+        &:not(.active)
+            .cntWrap
+                &>*
+                    transform: translateY(100%)
+                    opacity: 0
+        &.active
+            .cntWrap
+                &>*
+                    opacity: 1
+                    transform: none
+                    transition: transform 0.4s ease
+    .container
+        height: 100%
+    .dFlx
+        height: 100%
+        position: relative
+        z-index: 0
+        flex-direction: column
+        justify-content: flex-end
+        @include display
+        @media only screen and (min-width: 992px)
+            flex-direction: row
+            justify-content: initial
+            align-items: flex-end
+
+        &>.fullSd
+            width: 100%
+    .bgImgWrap
+        width: 100%
+        height: 100%
+        position: relative
+        z-index: -1
+        top: 0
+        left: 0
+        aspect-ratio: 1920 / 1080
+        img, picture, video
+            position: absolute
+            top: 0
+            left: 0
+            @include imgFit
+        .dsk
+            display: none
+            @media only screen and (min-width: 768px)
+                display: block
+        .mob
+            display: block
+            @media only screen and (min-width: 768px)
+                display: none
+    .cntWrap
+        width: 100%
+        max-width: 992px
+        height: auto
+        position: relative
+        z-index: 1
+        padding-right: 36px
+        &>*
+            color: $white
+            margin: 5px 0
+            transition: all 0.4s ease
+            @media only screen and (min-width: 576px)
+                margin: 10px 0
+            @media only screen and (min-width: 992px)
+                margin: 15px 0
+            @media only screen and (min-width: 1551px)
+                margin: 20px 0
+        .mHead
+            font-size: 26px
+            line-height: 1.2
+            font-weight: 700
+            color: $white
+            @media only screen and (min-width: 468px)
+                font-size: 30px
+            @media only screen and (min-width: 576px)
+                font-size: 36px
+            @media only screen and (min-width: 768px)
+                font-size: 46px
+            @media only screen and (min-width: 992px)
+                font-size: 54px
+            @media only screen and (min-width: 1200px)
+                font-size: 66px
+            @media only screen and (min-width: 1551px)
+                font-size: 70px
+        .txt
+            font-size: 18px
+            line-height: 1.4
+            font-weight: 300
+            @media only screen and (min-width: 576px)
+                font-size: 20px
+            @media only screen and (min-width: 992px)
+                font-size: 22px
+            @media only screen and (min-width: 1551px)
+                font-size: 24px
+    .carousel-indicators
+        margin: 0
+        padding: 15px
+        padding-bottom: var(--padd-y)
+        z-index: 0
+        justify-content: flex-end
+        align-items: center
+        display: none
+        @media only screen and (min-width: 576px)
+            display: flex
+        .carousel-indicatorsWrap
+            justify-content: flex-end
+            @include display
+        button
+            width: 6px
+            height: 4px
+            opacity: 0.4
+            will-change: transform
+            background: $white
+            border: 1px solid $white
+            margin: 2px
+            transition: all 0.4s ease
+            position: relative
+            z-index: 0
+            @media only screen and (min-width: 576px)
+                width: 8px
+                height: 5px
+            @media only screen and (min-width: 992px)
+                width: 10px
+                height: 6px
+                margin: 3px
+            &:hover
+                opacity: 0.8
+            &.active
+                width: 20px
+                clip-path: polygon(0 0, 100% 0, 98% 100%, 0% 100%)
+                opacity: 1
+                @media only screen and (min-width: 576px)
+                    width: 40px
+                @media only screen and (min-width: 992px)
+                    width: 60px
+    .scrollBttmBtn
+        font-size: 10px
+        font-weight: 400
+        letter-spacing: 0.5px
+        line-height: 1
+        text-align: center
+        color: #eee
+        writing-mode: vertical-lr
+        -ms-writing-mode: vertical-lr
+        width: 30px
+        height: auto
+        position: absolute
+        z-index: 1
+        bottom: 60px
+        left: auto
+        right: 2%
+        gap: 0 6px
+        justify-content: center
+        align-items: center
+        @include display
+        @media only screen and (min-width: 468px)
+            writing-mode: horizontal-tb
+            -ms-writing-mode: horizontal-tb
+            gap: 8px 0
+            bottom: 30px
+        @media only screen and (min-width: 576px)
+            bottom: 60px
+        @media only screen and (min-width: 992px)
+            font-size: 12px
+            gap: 0 10px
+            right: 0%
+            left: auto
+            bottom: 83px
+            writing-mode: vertical-lr
+            -ms-writing-mode: vertical-lr
+        @media only screen and (min-width: 1300px)
+            left: 2%
+            bottom: 100px
+        @media only screen and (min-width: 1551px)
+            left: 4%
+            right: auto
+        .txt
+            transform: rotate(180deg)
+            @media only screen and (min-width: 468px)
+                transform: rotate(0deg)
+            @media only screen and (min-width: 992px)
+                transform: rotate(180deg)
+        #ScrollMouse .arrow
+            animation: scrollDown 3s linear infinite

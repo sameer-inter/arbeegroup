@@ -1,0 +1,93 @@
+body
+    &.header_relative
+        #pageWrapper
+            padding-top: 125px
+            @media (max-width: 1779px)
+                padding-top: 102px
+            @media (max-width: 1551px)
+                padding-top: 91px
+            @media (max-width: 1199px)
+                padding-top: 76px
+            @media (max-width: 991px)
+                padding-top: 70px
+            @media (max-width: 767px)
+                padding-top: 64px
+    &.no-banner
+        #pageWrapper
+            padding-top: 125px
+            @media (max-width: 1779px)
+                padding-top: 102px
+            @media (max-width: 1551px)
+                padding-top: 91px
+            @media (max-width: 1199px)
+                padding-top: 76px
+            @media (max-width: 991px)
+                padding-top: 70px
+            @media (max-width: 767px)
+                padding-top: 64px
+        #Header
+            &.sticky
+                #HeaderMain
+                    .accordion 
+                        .accordion-item 
+                            .accordion-header 
+                                a
+                                    color: $white
+                                    &:hover, &.active
+                                        color: $basecolor2
+            #HeaderMain
+                .accordion 
+                    .accordion-item 
+                        .accordion-header 
+                            a
+                                color: $black
+                                &:hover, &.active
+                                    color: $basecolor
+.error_sec
+    margin: 0
+    padding: 140px 0 120px
+    text-align: center
+    @media (max-width: 1779px)
+        padding: 120px 0 100px
+    @media (max-width: 1551px)
+        padding: 80px 0
+    @media (max-width: 1199px)
+        padding: 80px 0 60px
+    @media (max-width: 767px)
+        padding: 60px 0 50px
+    .einfo
+        margin-bottom: 10px
+        font-size: 230px
+        color: $black
+        line-height: 1
+        font-weight: 700
+        letter-spacing: 15px
+        @media (max-width: 1199px)
+            font-size: 180px
+        @media (max-width: 991px)
+            font-size: 120px
+            letter-spacing: 10px
+        @media (max-width: 767px)
+            font-size: 80px
+        span
+            color: $basecolor
+    .global_title
+        margin-bottom: 20px
+        text-transform: uppercase
+        color: $basecolor
+        @media (max-width: 1199px)
+            margin-bottom: 10px
+        @media (max-width: 575px)
+            margin-bottom: 5px
+        strong
+            font-weight: 700
+    p
+        margin-bottom: 30px
+        @media (max-width: 1199px)
+            margin-bottom: 20px
+        @media (max-width: 767px)
+            margin-bottom: 15px
+    .btns
+        border-color: $basecolor
+#viewport
+    min-height: 600px

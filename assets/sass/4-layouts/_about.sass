@@ -1,0 +1,999 @@
+.inner_banner
+    margin: 0
+    padding: 0
+    position: relative
+    &::before
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 27.84%)
+    &::after
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 19.98%, rgba(0, 0, 0, 0.9) 100%)
+    .main_title
+        &:last-child
+            margin: 0
+    .inner_cap
+        position: absolute
+        left: 0
+        width: 100%
+        bottom: 75px
+        z-index: 1
+        @media (max-width:1779px)
+            bottom: 62px
+        @media (max-width:1551px)
+            bottom: 50px
+        @media (max-width: 1199px)
+            bottom: 40px
+        @media (max-width: 991px)
+            bottom: 30px
+    .bg
+        height: 728px
+        width: 100%
+        object-fit: cover
+        @media (max-width:1779px)
+            height: 590px
+        @media (max-width:1551px)
+            height: 490px
+        @media (max-width: 1199px)
+            height: 400px
+        @media (max-width: 991px)
+            height: 300px
+        @media (max-width: 767px)
+            height: 280px
+.breadcrumb
+    margin: 0
+    padding: 40px 0 20px
+    display: flex
+    position: relative
+    gap: 10px 0
+    z-index: 4
+    @media (max-width:1779px)
+        padding-top: 30px
+    @media (max-width:1551px)
+        padding-top: 25px
+    @media (max-width: 1199px)
+        padding-top: 20px
+    @media (max-width: 991px)
+        padding: 15px 0
+    li
+        margin: 0
+        padding: 0
+        font-size: 16px
+        font-weight: 300
+        position: relative
+        color: $text
+        transition: all .4s ease-in-out
+        @media (max-width:1779px)
+            font-size: 15px
+        @media (max-width:1551px)
+            font-size: 14px
+        @media (max-width:1199px)
+            font-size: 13px
+        &:last-child
+            color: $basecolor
+            a
+                color: $basecolor
+        +
+            li
+                padding-left: 30px
+                @media (max-width:1551px)
+                    padding-left: 26px
+                &::before
+                    content: ""
+                    position: absolute
+                    top: 6px
+                    left: 8px
+                    background: url(../images/breadcrumb_ic.svg) center center no-repeat
+                    background-size: 100% 100%
+                    height: 14px
+                    width: 14px
+                    @media (max-width:1779px)
+                        top: 5px
+                    @media (max-width:1551px)
+                        height: 12px
+                        top: 5px
+                        width: 12px
+                        left: 7px
+        a
+            color: $text
+            &:hover
+                color: $basecolor
+.about_sec
+    margin: 0
+    padding: 70px 0 100px
+    @media (max-width:1779px)
+        padding: 60px 0 70px
+    @media (max-width:1551px)
+        padding: 40px 0 80px
+    @media (max-width: 1199px)
+        padding: 20px 0 50px
+    @media (max-width: 767px)
+        padding: 15px 0 40px
+    .right-dtl
+        margin: 0
+        padding: 0 0 0 120px
+        @media (max-width: 1779px)
+            padding-left: 80px
+        @media (max-width:1551px)
+            padding-left: 60px
+        @media (max-width: 1199px)
+            padding-left: 40px
+        @media (max-width: 991px)
+            padding-left: 0
+        .global_title
+            margin-bottom: 32px
+            line-height: 1.3
+            @media (max-width: 1779px)
+                margin-bottom: 26px
+            @media (max-width:1551px)
+                margin-bottom: 22px
+            @media (max-width: 1199px)
+                margin-bottom: 20px
+            strong
+                display: inline
+        p
+            text-align: justify
+            font-weight: 300
+            font-size: 20px
+            @media (max-width: 1779px)
+                font-size: 16px
+            @media (max-width:1551px)
+                font-size: 14px
+                margin-bottom: 15px
+            @media (max-width: 1199px)
+                font-size: 13px
+    .lft-img
+        margin: 0
+        padding: 0
+        figure
+            margin: 20px 0 0 -50px
+            padding: 0
+            height: 682px
+            width: 672px
+            @media (max-width: 1779px)
+                height: 558px
+                width: 550px
+                margin: 13px 0 0 -45px
+            @media (max-width:1551px)
+                height: 465px
+                width: 458px
+                margin: 0 0 0 -40px
+            @media (max-width:1199px)
+                height: 352px
+                width: 345px
+                margin: 0 0 0 -13px
+            @media (max-width: 991px)
+                margin: 10px auto 0
+            @media (max-width: 767px)
+                height: 286px
+                width: 286px
+                margin: 5px auto 0
+            @media (max-width: 575px)
+                height: 216px
+                width: 216px
+            img
+                width: 100%
+                height: 100%
+                object-fit: contain
+.brand_sec
+    margin: 0
+    padding: 57px 0
+    position: relative
+    @media (max-width: 1779px)
+        padding: 45px 0
+    @media (max-width: 1551px)
+        padding: 38px 0
+    @media (max-width: 1199px)
+        padding: 30px 0
+    @media (max-width: 767px)
+        padding: 20px 0
+    &::before
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: rgba(0, 0, 0, 0.37)
+    .container
+        max-width: 1550px
+        @media (max-width: 1779px)
+            max-width: 1350px
+        @media (max-width:1551px)
+            max-width: 1060px
+        @media (max-width:991px)
+            max-width: none
+    .brand-bg
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        object-fit: cover
+    .brand-box
+        margin: 0
+        padding: 0
+        text-align: center
+        figure
+            margin: 0 0 20px
+            padding: 0
+            height: 100%
+            display: flex
+            justify-content: center
+            max-height: 104px
+            @media (max-width: 1779px)
+                max-height: 86px
+                margin-bottom: 16px
+            @media (max-width:1551px)
+                max-height: 70px
+                margin-bottom: 12px
+            @media (max-width: 1199px)
+                max-height: 60px
+                margin-bottom: 10px
+            @media (max-width: 767px)
+                max-height: 50px
+            img
+                width: auto
+                object-fit: contain
+                object-position: top center
+        span
+            font-size: 18px
+            font-weight: 500
+            color: $white
+            @media (max-width: 1779px)
+                font-size: 16px
+            @media (max-width:1551px)
+                font-size: 13px
+.mission_sec
+    margin: 0
+    padding: 150px 0 165px
+    position: relative
+    background: #D9F3FF
+    @media (max-width: 1779px)
+        padding: 130px 0 120px
+    @media (max-width: 1551px)
+        padding: 110px 0 100px
+    @media (max-width: 1199px)
+        padding: 70px 0
+    @media (max-width:991px)
+        padding: 60px 0
+    @media (max-width: 767px)
+        padding: 40px 0
+    &::before
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 225px
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%)
+        @media (max-width: 1551px)
+            height: 150px
+    &::after
+        content: ""
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 108px
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%)
+        @media (max-width: 1551px)
+            height: 75px
+    .curve
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 612px
+        background: url(../images/mission_curve.png) center center repeat-x
+        background-size: auto
+        opacity: 0.05
+        @media (max-width: 1779px)
+            height: 490px
+        @media (max-width: 1551px)
+            height: 410px
+    .row
+        --bs-gutter-x: 38px
+        @media (max-width: 1779px)
+            --bs-gutter-x: 32px
+        @media (max-width: 1551px)
+            --bs-gutter-x: 26px
+        @media (max-width: 1199px)
+            --bs-gutter-x: 22px
+        @media (max-width:991px)
+            --bs-gutter-x: 18px
+        @media (max-width:767px)
+            --bs-gutter-y: 15px
+    .mission-block
+        margin: 0
+        padding: 60px 40px 60px 50px
+        background: $white
+        position: relative
+        z-index: 2
+        border-radius: 12px
+        @media (max-width: 1779px)
+            padding: 52px 32px 52px 42px
+        @media (max-width: 1551px)
+            padding: 36px 26px 45px 35px
+        @media (max-width: 1199px)
+            padding: 30px 22px 35px 30px
+        @media (max-width:991px)
+            border-radius: 8px
+            padding: 25px 20px 30px 25px
+        @media (max-width: 767px)
+            padding: 20px
+        &::before
+            content: ""
+            position: absolute
+            top: 0
+            left: 0
+            height: 100%
+            width: 100%
+            border-radius: 12px
+            background: linear-gradient(90deg, #CBEBF8 0%, #D8F0EC 50%, #D3EEF1 100%)
+            transition: all .4s ease-in-out
+            opacity: 0
+            z-index: -1
+            @media (max-width:991px)
+                border-radius: 8px
+        &:hover
+            &::before
+                opacity: 1
+        &.vision
+            margin-top: 80px
+            @media (max-width: 1779px)
+                margin-top: 65px
+            @media (max-width: 1551px)
+                margin-top: 55px
+            @media (max-width: 1199px)
+                margin-top: 40px
+            @media (max-width:991px)
+                margin-top: 30px
+            @media (max-width:767px)
+                margin-top: 0
+            &::before
+                opacity: 1
+            &:hover
+                &::before
+                    opacity: 0
+            .global_title
+                margin-bottom: 65px
+                @media (max-width: 1779px)
+                    margin-bottom: 50px
+                @media (max-width: 1551px)
+                    margin-bottom: 38px
+                @media (max-width: 1199px)
+                    margin-bottom: 30px
+                @media (max-width: 767px)
+                    margin-bottom: 20px
+        .global_title
+            display: flex
+            gap: 25px
+            margin-bottom: 55px
+            font-weight: 600
+            @media (max-width: 1779px)
+                gap: 20px
+                margin-bottom: 45px
+            @media (max-width: 1551px)
+                margin-bottom: 38px
+                gap: 18px
+            @media (max-width: 1199px)
+                margin-bottom: 28px
+                gap: 12px
+            @media (max-width:991px)
+                margin-bottom: 20px
+                gap: 10px
+            i
+                display: flex
+                @media (max-width: 1779px)
+                    height: 27px
+                    width: 27px
+                    margin-top: 8px
+                @media (max-width: 1551px)
+                    margin-top: 7px
+                    height: 24px
+                    width: 24px
+                @media (max-width: 1199px)
+                    height: 20px
+                    width: 20px
+                    margin-top: 4px
+                @media (max-width:991px)
+                    height: 18px
+                    width: 18px
+                    margin-top: 6px
+                @media (max-width: 767px)
+                    height: 16px
+                    width: 16px
+                    margin-top: 4px
+        h3
+            margin: 0 0 35px
+            padding: 0
+            font-size: 28px
+            font-weight: 500
+            color: $basecolor
+            line-height: normal
+            @media (max-width: 1779px)
+                font-size: 24px
+                margin-bottom: 26px
+            @media (max-width: 1551px)
+                margin-bottom: 18px
+                font-size: 20px
+            @media (max-width: 1199px)
+                margin-bottom: 14px
+                font-size: 18px
+            @media (max-width:991px)
+                margin-bottom: 10px
+                font-size: 16px
+            @media (max-width: 767px)
+                font-size: 15px
+                br
+                    display: none
+        p
+            font-weight: 300
+            font-size: 20px
+            @media (max-width: 1779px)
+                font-size: 16px
+            @media (max-width: 1551px)
+                font-size: 14px
+            @media (max-width:991px)
+                font-size: 13px
+            &:last-of-type
+                margin-bottom: 0
+        figure
+            margin: -130px 0 -150px
+            padding: 0
+            text-align: center
+            animation: fishFloat 6s ease-in-out infinite alternate
+            @media (max-width: 1779px)
+                width: 470px
+                margin: -100px 0 -120px
+            @media (max-width: 1551px)
+                width: 390px
+                margin: -86px 0 -100px
+            @media (max-width: 1199px)
+                width: 360px
+                margin: -67px 0 -85px
+            @media (max-width:991px)
+                width: 280px
+                margin: -55px 0 -70px
+            @media (max-width: 767px)
+                display: none
+            img
+                object-fit: contain
+.philosophy_sec
+    margin: 0
+    padding: 80px 0 185px
+    @media (max-width: 1779px)
+        padding: 65px 0 150px
+    @media (max-width: 1551px)
+        padding: 55px 0 100px
+    @media (max-width: 1199px)
+        padding: 40px 0 70px
+    @media (max-width: 991px)
+        padding: 20px 0 60px
+    @media (max-width: 767px)
+        padding: 10px 0 40px
+    .lft-dtl
+        margin: 0
+        padding: 0 90px 0 0
+        @media (max-width: 1551px)
+            padding-right: 40px
+        @media (max-width: 1199px)
+            padding-right: 30px
+        @media (max-width: 991px)
+            padding-right: 0
+            margin-bottom: 20px
+        @media (max-width:575px)
+            margin-bottom: 15px
+        .global_title
+            font-size: 32px
+            margin-bottom: 30px
+            @media (max-width: 1779px)
+                font-size: 27px
+                margin-bottom: 24px
+            @media (max-width: 1551px)
+                font-size: 23px
+                margin-bottom: 20px
+            @media (max-width: 1199px)
+                font-size: 20px
+            @media (max-width: 991px)
+                margin-bottom: 15px
+            @media (max-width: 767px)
+                font-size: 18px
+            small
+                margin-bottom: 15px
+                @media (max-width: 1779px)
+                    margin-bottom: 12px
+                @media (max-width: 1551px)
+                    margin-bottom: 10px
+                @media (max-width: 1199px)
+                    margin-bottom: 8px
+            strong
+                line-height: 1.6
+                @media (max-width: 1199px)
+                    line-height: 1.4
+        p
+            font-weight: 300
+            font-size: 20px
+            @media (max-width: 1779px)
+                font-size: 16px
+            @media (max-width: 1551px)
+                font-size: 14px
+            &:last-of-type
+                margin-bottom: 0
+    .rgt-img
+        margin: 0
+        padding: 0
+        display: flex
+        gap: 10px
+        figure
+            margin: 0
+            padding: 0
+            border-radius: 10px
+            overflow: hidden
+            width: 514px
+            height: 625px
+            @media (max-width: 1779px)
+                width: 420px
+                height: 510px
+            @media (max-width: 1551px)
+                width: 344px
+                height: 440px
+            @media (max-width: 1199px)
+                width: 280px
+                height: 330px
+            @media (max-width: 991px)
+                width: 100%
+                height: 350px
+            @media (max-width:575px)
+                height: 260px
+            &:first-child
+                width: 330px
+                @media (max-width: 1779px)
+                    width: 265px
+                @media (max-width: 1551px)
+                    width: 220px
+                @media (max-width: 1199px)
+                    width: 190px
+                @media (max-width: 991px)
+                    width: 60%
+            &:hover
+                img
+                    transform: scale3d(1.1, 1.1, 1.1)
+            img
+                height: 100%
+                width: 100%
+                object-fit: cover
+                transition: all 1.5s cubic-bezier(0, 0, 0.2, 1)
+.history_sec
+    margin: 0
+    padding: 110px 0 0
+    position: relative
+    overflow: hidden
+    @media (max-width: 1779px)
+        padding-top: 90px
+    @media (max-width: 1551px)
+        padding-top: 80px
+    @media (max-width: 1199px)
+        padding-top: 60px
+    @media (max-width: 991px)
+        padding: 60px 0
+    @media (max-width: 767px)
+        padding: 40px 0
+    &::before
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        background: rgba($black, 73%)
+        height: 100%
+        width: 100%
+        backdrop-filter: blur(4px)
+        z-index: 1
+    .bg
+        position: absolute
+        top: 0
+        left: 0
+        height: 100%
+        width: 100%
+        object-fit: cover
+    .container
+        position: relative
+        z-index: 2
+    .title-wrp
+        margin: 0 0 185px
+        padding: 0
+        @media (max-width: 1779px)
+            margin-bottom: 155px
+        @media (max-width: 1551px)
+            margin-bottom: 120px
+        @media (max-width: 1199px)
+            margin-bottom: 80px
+        @media (max-width: 991px)
+            margin-bottom: 20px
+        .global_title
+            margin-bottom: 20px
+            @media (max-width: 1779px)
+                margin-bottom: 15px
+            @media (max-width: 1551px)
+                margin-bottom: 12px
+        p
+            margin: 0
+            font-size: 28px
+            font-weight: 500
+            color: $white
+            @media (max-width: 1779px)
+                font-size: 23px
+            @media (max-width: 1551px)
+                font-size: 19px
+            @media (max-width: 1199px)
+                font-size: 16px
+            @media (max-width: 991px)
+                font-size: 14px
+    .timeline-years
+        position: relative
+        width: 100%
+        height: 1720px
+        max-width: 1720px
+        border: 1px solid rgba($white, 30%)
+        border-radius: 50%
+        transition: all 2s ease-in-out
+        margin: 0 auto calc(-1 * (100% - 740px))
+        @media (max-width: 1779px)
+            height: 1350px
+            max-width: 1350px
+            margin: 0 auto calc(-1 * (100% - 660px))
+        @media (max-width: 1551px)
+            height: 1120px
+            max-width: 1120px
+            margin: 0 auto calc(-1 * (100% - 570px))
+        @media (max-width: 1199px)
+            height: 900px
+            max-width: 900px
+            margin: 0 auto calc(-1 * (100% - 420px))
+        @media (max-width: 991px)
+            display: flex
+            overflow-x: auto
+            overflow-y: hidden
+            scrollbar-width: thin
+            height: auto
+            margin: 0 0 30px
+            padding-bottom: 22px
+            border: none
+            border-radius: 0
+            gap: 60px
+            justify-content: center
+            scrollbar-width: none
+            &::before
+                content: ""
+                position: absolute
+                bottom: 9px
+                left: 0
+                height: 1px
+                width: 200%
+                background: rgba($white, 30%)
+        @media (max-width: 767px)
+            gap: 50px
+        @media (max-width: 575px)
+            justify-content: start
+    .year
+        position: absolute
+        font-size: 30px
+        font-weight: 500
+        top: 100%
+        background: rgba($white, 33%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        background-clip: text
+        text-fill-color: transparent
+        transition: all 0.4s ease-in-out
+        @media (max-width: 1779px)
+            font-size: 24px
+        @media (max-width: 1551px)
+            font-size: 21px
+        @media (max-width: 1199px)
+            font-size: 19px
+        @media (max-width: 991px)
+            font-size: 18px
+            position: relative
+            transform: none !important
+            left: unset !important
+            top: unset !important
+            bottom: unset !important
+            right: unset !important
+        @media (max-width: 767px)
+            font-size: 16px
+        &::before
+            content: ""
+            position: absolute
+            left: 50%
+            transform: translateX(-50%)
+            bottom: -32px
+            background: url(../images/year-dot.svg) center center no-repeat
+            background-size: 100% 100%
+            filter: brightness(0) invert(1)
+            height: 25px
+            width: 25px
+            z-index: 1
+            transition: all 0.4s ease-in-out
+            @media (max-width: 1779px)
+                height: 20px
+                width: 20px
+                bottom: -25px
+            @media (max-width: 1551px)
+                height: 18px
+                width: 18px
+                bottom: -22px
+            @media (max-width: 1199px)
+                height: 16px
+                width: 16px
+                bottom: -20px
+        &::after
+            content: ""
+            position: absolute
+            left: 50%
+            transform: translateX(-50%)
+            top: 65px
+            background: rgba($white, 50%)
+            filter: brightness(0) invert(1)
+            height: 130px
+            width: 1px
+            opacity: 0
+            transition: all 0.4s ease-in-out
+            @media (max-width: 1779px)
+                top: 60px
+                height: 110px
+            @media (max-width: 1551px)
+                top: 45px
+                height: 95px
+            @media (max-width: 1199px)
+                height: 70px
+            @media (max-width: 991px)
+                display: none
+        &.active
+            background: linear-gradient(90deg, #0089CF 0%, #A6CE39 100%)
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+            background-clip: text
+            text-fill-color: transparent
+            // font-size: 43px
+            &::before
+                filter: none
+            &::after
+                opacity: 1
+        &.pos1
+            left:50%
+            top: -66px
+            transform: translateX(-50%)
+            @media (max-width: 1779px)
+                top: -52px
+            @media (max-width: 1551px)
+                top: -46px
+            @media (max-width: 1199px)
+                top: -42px
+        &.pos2
+            right:438px
+            top:21px
+            transform: rotate(26deg)
+            @media (max-width: 1779px)
+                right: 344px
+                top: 16px
+            @media (max-width: 1551px)
+                right: 283px
+                top: 12px
+            @media (max-width: 1199px)
+                right: 225px
+                top: 4px
+        &.pos3
+            right:122px
+            top:266px
+            transform: rotate(52deg)
+            @media (max-width: 1779px)
+                right: 96px
+                top: 209px
+            @media (max-width: 1551px)
+                right: 75px
+                top: 173px
+            @media (max-width: 1199px)
+                right: 52px
+                top: 139px
+        &.pos4
+            right:-51px
+            top:623px
+            transform: rotate(76deg)
+            @media (max-width: 1779px)
+                right: -40px
+                top: 489px
+            @media (max-width: 1551px)
+                right: -36px
+                top: 406px
+            @media (max-width: 1199px)
+                top: 326px
+        &.pos5
+            right:-60px
+            top:1022px
+            transform: rotate(103deg)
+            @media (max-width: 1779px)
+                right: -47px
+                top: 802px
+            @media (max-width: 1551px)
+                right: -41px
+                top: 668px
+            @media (max-width: 1199px)
+                right: -39px
+                top: 535px
+        &.pos6
+            right: 107px
+            top: 1386px
+            transform: rotate(128deg)
+            @media (max-width: 1779px)
+                right: 84px
+                top: 1088px
+            @media (max-width: 1551px)
+                right: 68px
+                top: 902px
+            @media (max-width: 1199px)
+                right: 52px
+                top: 729px
+        &.pos7
+            right: 412px
+            top: 1640px
+            transform: rotate(153deg)
+            @media (max-width: 1779px)
+                right: 323px
+                top: 1287px
+            @media (max-width: 1551px)
+                right: 268px
+                top: 1067px
+            @media (max-width: 1199px)
+                right: 213px
+                top: 860px
+        &.pos8
+            right: 798px
+            top: 1738px
+            transform: rotate(179deg)
+            @media (max-width: 1779px)
+                right: 626px
+                top: 1364px
+            @media (max-width: 1551px)
+                right: 520px
+                top: 1132px
+            @media (max-width: 1199px)
+                right: 417px
+                top: 911px
+        &.pos9
+            left: 456px
+            top: auto
+            bottom: 12px
+            transform: rotate(205deg)
+            @media (max-width: 1779px)
+                left: 358px
+                bottom: 9px
+            @media (max-width: 1551px)
+                left: 295px
+                bottom: 6px
+            @media (max-width: 1199px)
+                left: 228px
+                bottom: 2px
+        &.pos10
+            left: 140px
+            top: auto
+            transform: rotate(229deg)
+            bottom: 247px
+            @media (max-width: 1779px)
+                left: 110px
+                bottom: 194px
+            @media (max-width: 1551px)
+                left: 89px
+                bottom: 158px
+            @media (max-width: 1199px)
+                left: 66px
+                bottom: 123px
+        &.pos11
+            left: -47px
+            top: auto
+            transform: rotate(255deg)
+            bottom: 600px
+            @media (max-width: 1779px)
+                left: -37px
+                bottom: 471px
+            @media (max-width: 1551px)
+                left: -34px
+                bottom: 390px
+            @media (max-width: 1199px)
+                left: -33px
+                bottom: 310px
+        &.pos12
+            left: -64px
+            top: 673px
+            transform: rotate(280deg)
+            @media (max-width: 1779px)
+                left: -50px
+                top: 528px
+            @media (max-width: 1551px)
+                left: -45px
+                top: 438px
+            @media (max-width: 1199px)
+                left: -42px
+                top: 353px
+        &.pos13
+            left: 95px
+            top: 305px
+            transform: rotate(306deg)
+            @media (max-width: 1779px)
+                left: 75px
+                top: 239px
+            @media (max-width: 1551px)
+                left: 57px
+                top: 199px
+            @media (max-width: 1199px)
+                left: 40px
+                top: 157px
+        &.pos14
+            top: 42px
+            left: 394px
+            transform: rotate(332deg)
+            @media (max-width: 1779px)
+                left: 309px
+                top: 33px
+            @media (max-width: 1551px)
+                left: 254px
+                top: 25px
+            @media (max-width: 1199px)
+                left: 206px
+                top: 22px
+    .timeline-slider
+        position: absolute
+        width: 100%
+        top: 510px
+        z-index: 6
+        max-width: 768px
+        left: 50%
+        transform: translateX(-50%)
+        text-align: center
+        @media (max-width: 1779px)
+            max-width: 670px
+            top: 460px
+        @media (max-width: 1551px)
+            max-width: 540px
+            top: 380px
+        @media (max-width: 1199px)
+            top: 310px
+        @media (max-width: 991px)
+            position: unset
+            transform: none
+        h3
+            margin: 0 0 30px
+            padding: 0
+            font-size: 32px
+            font-weight: 500
+            color: $white
+            @media (max-width: 1779px)
+                font-size: 27px
+            @media (max-width: 1551px)
+                font-size: 24px
+                margin-bottom: 20px
+            @media (max-width: 1199px)
+                font-size: 22px
+                margin-bottom: 15px
+        p
+            margin: 0
+            padding: 0
+            font-weight: 300
+            color: $white
+            font-size: 20px
+            @media (max-width: 1779px)
+                font-size: 17px
+            @media (max-width: 1551px)
+                font-size: 14px
+            @media (max-width: 767px)
+                font-size: 13px

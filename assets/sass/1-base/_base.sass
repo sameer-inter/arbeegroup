@@ -1,0 +1,783 @@
+// BASE STYLES
+*
+    margin: 0
+    padding: 0
+    border: none
+    outline: none
+    list-style: none
+    box-sizing: border-box
+    border-collapse: inherit
+    -moz-osx-font-smoothing: grayscale
+    -webkit-font-smoothing: antialiased
+    -webkit-tap-highlight-color: transparent
+    -webkit-text-rendering: optimizeSpeed
+    text-rendering: optimizeSpeed
+    // scrollbar-width: thin
+    // scrollbar-color: $basecolor rgb(0, 0, 0)
+
+html, body
+    font-family: $fontstack1
+    line-height: normal
+    font-weight: 400
+    color: $text
+
+@-moz-document url-prefix()
+    html
+        scrollbar-width: thin
+        scrollbar-color: $basecolor grey
+
+@media(prefers-reduced-motion:no-preference)
+    :root
+        scroll-behavior: smooth
+
+.cPop-open
+    overflow: hidden
+
+::selection
+    color: $white
+    background: $basecolor
+::-moz-selection
+    color: $white
+    background: $basecolor
+::-webkit-scrollbar
+    width: 5px
+::-webkit-scrollbar-thumb
+    background: $black
+    will-change: transform
+    border-radius: 30px
+::-webkit-scrollbar-track
+    box-shadow: inset 0 0 0 grey
+    border-radius: 0px
+    background: rgb(168, 180, 198)
+
+h1,
+h2,
+h3,
+h4
+    margin: 0.1rem 0 0
+
+h1
+    font-size: 2rem
+
+h2
+    font-size: 1.5rem
+
+h3
+    font-size: 1.2rem
+
+h4
+    font-size: 1rem
+
+p, %pTxt
+    line-height: 1.67
+    font-weight: 400
+    margin-bottom: 25px
+    font-size: 18px
+    @media (max-width: 1779px)
+        font-size: 16px
+    @media (max-width: 1551px)
+        font-size: 14px
+        margin-bottom: 20px
+    @media (max-width: 1199px)
+        margin-bottom: 20px
+        font-size: 13px
+    @media (max-width: 991px)
+        margin-bottom: 15px
+    @media (max-width: 767px)
+        line-height: 1.56
+    &.info
+        line-height: 1.5
+        font-size: 20px
+        @media (max-width: 1779px)
+            font-size: 17px
+        @media (max-width:1551px)
+            font-size: 15px
+        @media (max-width:1199px)
+            font-size: 14px
+    strong
+        font-weight: 600
+    a
+        display: inline
+        text-decoration: none
+        text-underline-position: under
+        transition: all .4s ease-in-out
+        color: $text
+        &:hover
+            color: $basecolor
+a
+    color: $basecolor
+    text-decoration: none
+    transition: all .4s ease-in-out
+    &:hover
+        color: inherit
+
+a:not([href]):not([class]),a:not([href]):not([class]):hover
+    color: inherit
+    text-decoration: none
+
+ul
+    margin: 0
+    padding: 0
+    list-style: none
+
+img
+    border: 0
+    vertical-align: middle
+    -ms-interpolation-mode: bicubic
+    max-width: 100%
+    height: auto
+
+iframe
+    width: 100%
+    height: 100%
+
+.form-group
+    position: relative
+    margin-bottom: 5px
+    @media only screen and (min-width: 576px)
+        margin-bottom: 10px
+    @media only screen and (min-width: 992px)
+        margin-bottom: 15px
+    @media only screen and (min-width: 1441px)
+        margin-bottom: 20px
+    .iti
+        line-height: 1
+        color: #28282A
+        font-weight: 400
+        width: 100%
+        @include display
+        flex-wrap: nowrap
+        font-size: 13px
+        @media only screen and (min-width: 1552px)
+            font-size: 14px
+        .iti__flag
+            box-shadow: none
+            &.iti__in
+                border-radius: 0
+        .iti__arrow
+            display: block
+            margin-left: 10px
+            position: relative
+            border: none
+            height: 5px
+            width: 8px
+            &::before
+                content: ""
+                position: absolute
+                top: 0
+                left: 0
+                background: url(../images/faq_arrow.svg) center center no-repeat
+                background-size: 100% 100%
+                width: 8px
+                height: 5px
+                transform: rotate(180deg)
+                filter: brightness(0)
+        .iti__selected-flag
+            border-radius: 5px
+            padding: 9px 20px
+            height: 38px
+            margin-top: 8px
+            position: relative
+            background: transparent !important
+            z-index: 2
+            @media (max-width: 1779px)
+                height: 34px
+                margin-top: 5px
+            @media (max-width: 1551px)
+                padding: 7px 14px
+                height: 30px
+                margin-top: 4px
+            @media (max-width: 1199px)
+                margin-top: 3px
+            @media (max-width: 767px)
+                margin-top: 2px
+                height: 28px
+            &::before
+                content: ""
+                border: 1px solid #B2B2B2
+                border-radius: 5px
+                height: 100%
+                width: calc(100% - 20px)
+                position: absolute
+                top: 0
+                left: 10px
+                background: $white !important
+                z-index: -1
+                @media (max-width: 1551px)
+                    left: 5px
+                    width: calc(100% - 10px)
+        .iti__flag-container
+            position: absolute
+    label, .label
+        font-size: 13px
+        line-height: 1
+        color: $black
+        font-weight: 400
+        margin-bottom: 5px
+        @media only screen and (min-width: 576px)
+            font-size: 14px
+        @media only screen and (min-width: 992px)
+            font-size: 16px
+            margin-bottom: 10px
+        @media only screen and (min-width: 1441px)
+            font-size: 18px
+    .inputWrap
+        position: relative
+        z-index: 0
+        &.hasIcon
+            .form-control
+                padding-right: 20px
+                @media only screen and (min-width: 576px)
+                    padding-right: 25px
+            &.lft
+                .form-control
+                    padding-left: 20px
+                    @media only screen and (min-width: 576px)
+                        padding-left: 25px
+                .icon
+                    left: 0
+                    right: auto
+            .icon
+                width: 12px
+                height: 12px
+                position: absolute
+                top: 10px
+                right: 0
+                left: auto
+                margin: 0 5px
+                @media only screen and (min-width: 576px)
+                    top: 18px
+                    width: 14px
+                    height: 14px
+                svg, img
+                    display: block
+                    fill: $black
+                    @include imgFit
+            .toggle-password
+                opacity: 0
+        .form-control:focus~.toggle-password, .form-control:not(:placeholder-shown)~.toggle-password
+            opacity: 1
+
+.toggle-password
+    cursor: pointer
+    &.icon
+        top: 50% !important
+        transform: translateY(-50%) !important
+        width: 16px !important
+        height: 16px !important
+        margin: 0 15px !important
+        @media only screen and (min-width: 576px)
+            width: 18px !important
+            height: 18px !important
+        svg
+            opacity: 50%
+            fill: $basecolor !important
+
+.form-control
+    font-size: 13px
+    font-weight: 400
+    line-height: 1
+    color: $black
+    width: 100%
+    height: 40px
+    border: 1px solid #E1E6EB
+    border-radius: 5px
+    background-color: $white
+    padding: 5px 10px
+    transition: all .3s ease
+    align-items: center
+    @include display
+    @media only screen and (min-width: 576px)
+        height: 45px
+    @media only screen and (min-width: 992px)
+        font-size: 14px
+        height: 48px
+        padding: 10px 15px
+    @media only screen and (min-width: 1441px)
+        height: 50px
+        padding: 10px 20px
+    &:valid ~ .showPass
+        opacity: 1
+        pointer-events: all
+    &::placeholder
+        font-size: 12px
+        line-height: normal
+        font-weight: 300
+        color: $black
+        text-transform: none
+        @media only screen and (min-width: 576px)
+            font-size: 13px
+    &:focus
+        box-shadow: none
+        border-color: $basecolor
+        background: $white
+        color: $black
+    &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus, :-webkit-autofill:active
+        -webkit-box-shadow: 0 0 0 1000px white inset
+        -webkit-text-fill-color: black
+        transition: background-color 5000s ease-in-out 0s
+    &:-internal-autofill-selected
+        background-color: -internal-light-dark(rgb(0, 0, 0), rgba(70, 90, 126, 0.4)) !important
+        -webkit-box-shadow: 0 0 0px 30px rgb(0, 0, 0) inset
+    &:-webkit-autofill
+        -webkit-box-shadow: 0 0 0 1000px white inset !important
+        -webkit-text-fill-color: black
+    &::-ms-expand
+        background-color: transparent
+        border: 0
+    @media (prefers-reduced-motion: reduce)
+        transition: none
+
+input[type=number]::-webkit-inner-spin-
+    -webkit-appearance: none
+
+.form-floating
+    &>label
+        font-size: 12px
+        line-height: 1
+        color: $text
+        padding: 15px 5px
+        left: 10px
+        z-index: 3
+        display: flex
+        align-items: center
+        @media only screen and (min-width: 576px)
+            font-size: 13px
+        @media only screen and (min-width: 992px)
+            left: 15px
+            font-size: 14px
+    .form-control, .form-control-plaintext
+        padding: 5px 15px
+        will-change: transform
+        border-radius: 5px
+        border: 1px solid #d6d6d6
+        min-height: auto
+        height: 35px
+        @media only screen and (min-width: 576px)
+            height: 45px
+        @media only screen and (min-width: 992px)
+            padding: 5px 20px
+        @media only screen and (min-width: 1200px)
+            height: 50px
+    .form-control-plaintext:-webkit-autofill, .form-control:-webkit-autofill
+        padding: 5px 10px
+        @media only screen and (min-width: 992px)
+            padding: 10px 20px
+    .form-control-plaintext:focus, .form-control-plaintext:not(:placeholder-shown), .form-control:focus, .form-control:not(:placeholder-shown)
+        padding: 5px 10px
+        @media only screen and (min-width: 992px)
+            padding: 10px 20px
+    .form-control:-webkit-autofill, .form-control-plaintext, .form-control:focus, .form-control:not(:placeholder-shown), .form-select
+        border-color: $basecolor
+    .form-control:-webkit-autofill~label, .form-control-plaintext~label, .form-control:focus~label, .form-control:not(:placeholder-shown)~label, .form-select~label
+        opacity: 1
+        transform: scale(0.85) translateY(-10px) translateX(0)
+        height: auto
+        width: auto
+        padding: 0px 5px
+        background: $white
+    .form-control:-webkit-autofill ~ .showPass, .form-control:focus ~ .showPass, .form-control:not(:placeholder-shown) ~ .showPass, .form-select ~ .showPass
+        opacity: 1
+        pointer-events: all
+
+textarea.form-control
+    min-height: 100px
+    padding-top: 10px
+    @media only screen and ( min-width: 576px )
+        padding-top: 15px
+    @media only screen and ( min-width: 992px )
+        min-height: 100px
+        padding-top: 20px
+input[type="date"].form-control,
+input[type="datetime-local"].form-control,
+input[type="month"].form-control,
+input[type="time"].form-control
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+input[type="date"]
+    position: relative
+[list]:not([type=date]):not([type=datetime-local]):not([type=month]):not([type=week]):not([type=time])::-webkit-calendar-picker-indicator
+    display: none!important
+input[type="date"]::-webkit-calendar-picker-indicator
+    color: rgba(0, 0, 0, 0)
+    opacity: 1
+    display: block
+    background: url('../images/calendar.svg') no-repeat
+    width: 18px
+    height: 18px
+    border-width: thin
+    position: absolute
+    right: 22px
+[type=button],[type=reset],[type=submit],button
+    -webkit-appearance: button
+
+[type=button]:not(:disabled),[type=reset]:not(:disabled),[type=submit]:not(:disabled),button:not(:disabled)
+    cursor: pointer
+::-moz-focus-inner
+    padding: 0
+    border-style: none
+::-webkit-datetime-edit-day-field,::-webkit-datetime-edit-fields-wrapper,::-webkit-datetime-edit-hour-field,::-webkit-datetime-edit-minute,::-webkit-datetime-edit-month-field,::-webkit-datetime-edit-text,::-webkit-datetime-edit-year-field
+    padding: 0
+
+::-webkit-inner-spin-button
+    height: auto
+[type=search]
+    -webkit-appearance: textfield
+    outline-offset: -2px
+
+::-webkit-search-decoration
+    -webkit-appearance: none
+
+::-webkit-color-swatch-wrapper
+    padding: 0
+
+::-webkit-file-upload-button
+    font: inherit
+    -webkit-appearance: button
+
+::file-selector-button
+    font: inherit
+    -webkit-appearance: button
+[hidden]
+    display: none!important
+textarea
+    resize: vertical
+.help-block
+    font-size: 12px
+    line-height: 1
+    color: $black
+    margin: 2px 0
+    transition: all 0.3s
+    position: absolute
+    &.success
+        color: green
+    &.danger
+        color: red
+
+.action-alert
+    font-size: 12px
+    color: $black
+    line-height: 1.2
+    padding: 9px 10px
+    width: fit-content
+    transition: all 0.3s
+    width: 100%
+    will-change: transform
+    border-radius: 5px
+    border-width: 1px
+    border-style: solid
+    margin: 10px 0
+    @media only screen and ( min-width: 576px )
+        font-size: 12px
+    &.success
+        color: $black
+        background: #c6ffc6
+        border-color: rgba(green, 0.5 )
+    &.danger
+        color: $black
+        background: #ffc6c6
+        border-color: rgba(red, 0.5 )
+
+svg
+    display: inline-block
+    position: relative
+    width: 100%
+    vertical-align: middle
+    overflow: hidden
+
+.btn-check:focus+.btn, .btn:focus
+    outline: 0
+    box-shadow: none
+
+.row
+    --bs-gutter-x: 10px
+    --bs-gutter-y: 10px
+    @include display
+    margin-left: calc(var(--bs-gutter-x) / -2)
+    margin-right: calc(var(--bs-gutter-x) / -2)
+    >
+        *
+            padding-left: calc(var(--bs-gutter-x) / 2)
+            padding-right: calc(var(--bs-gutter-x) / 2)
+.c-checkbox
+    align-items: center
+    @include display
+    input
+        padding: 0
+        height: initial
+        width: initial
+        margin-bottom: 0
+        display: none
+        cursor: pointer
+    label
+        position: relative
+        cursor: pointer
+        margin: 0
+        font-size: 12px
+        line-height: 1
+        font-weight: 400
+        @media only screen and (min-width: 376px)
+            font-size: 13px
+        @media only screen and (min-width: 992px)
+            font-size: 14px
+        @media only screen and (min-width: 1441px)
+            font-size: 16px
+        &:after
+            content: ''
+            display: block
+            position: absolute
+            top: 3px
+            left: 6px
+            width: 5px
+            height: 10px
+            border: solid transparent
+            border-width: 0 2px 2px 0
+            transform: rotate(45deg)
+            margin-top: -2px
+            @media only screen and (min-width: 992px)
+                top: 4px
+        &:before
+            content: ''
+            -webkit-appearance: none
+            background-color: #4C2236
+            border: 1px solid $white
+            will-change: transform
+            border-radius: 0
+            box-shadow: none
+            padding: 8px
+            display: inline-block
+            position: relative
+            vertical-align: middle
+            cursor: pointer
+            margin-right: 5px
+            margin-top: -2px
+            @media only screen and (min-width: 992px)
+                margin-right: 10px
+    input:checked + label
+        color: $basecolor
+        &::before
+            background-color: $white
+            border-color: $white
+    input:checked + label:after
+        border-color: $black
+ol
+    margin: 0 0 20px 20px
+    padding: 0
+    @media (max-width:1551px)
+        margin-left: 15px
+    @media (max-width:991px)
+        margin-bottom: 10px
+    li
+        margin: 0 0 10px
+        padding: 0
+        font-size: 18px
+        line-height: 1.67
+        list-style: decimal
+        position: relative
+        @media (max-width:1779px)
+            font-size: 16px
+            margin-bottom: 8px
+        @media (max-width:1551px)
+            margin-bottom: 6px
+            font-size: 14px
+        @media (max-width:575px)
+            font-size: 13px
+        a
+            color: $text
+            text-decoration: underline
+            &:hover
+                color: $basecolor
+
+.typo, .typo-white
+    ul
+        margin: 0 0 20px
+        padding: 0
+        li
+            margin: 0 0 10px 
+            padding: 0 0 0 30px
+            font-size: 18px
+            font-weight: 400
+            line-height: 1.67
+            position: relative
+            color: $text
+            @media (max-width:1779px)
+                margin-bottom: 8px
+                font-size: 16px
+            @media (max-width:1551px)
+                font-size: 14px
+                padding: 0 0 0 23px
+            @media (max-width:575px)
+                font-size: 13px
+            &:last-of-type
+                margin-bottom: 0
+            &::before
+                content: ""
+                position: absolute
+                top: 7px
+                left: 0
+                background: url(../images/company_ic.svg) center center no-repeat
+                background-size: 100% 100%
+                height: 16px
+                width: 16px
+                @media (max-width:1779px)
+                    height: 15px
+                    width: 15px
+                    top: 6px
+                @media (max-width:1551px)
+                    height: 12px
+                    width: 12px
+                @media (max-width:575px)
+                    top: 5px
+            a
+                color: $text
+                text-decoration: underline
+                &:hover
+                    color: $basecolor
+.typo-white
+    ul,ol
+        li
+            color: $white
+            &::before
+                filter: brightness(0) invert(1)
+            a
+                color: $white
+                &:hover
+                    color: rgba($white, 0.6)
+.global_title
+    margin: 0 0 25px
+    padding: 0
+    font-size: 54px
+    font-weight: 600
+    color: $titlecolor
+    @media (max-width: 1779px)
+        font-size: 44px
+        margin-bottom: 20px
+    @media (max-width: 1551px)
+        font-size: 38px
+    @media (max-width:1199px)
+        font-size: 32px
+    @media (max-width: 991px)
+        font-size: 26px
+    @media (max-width: 767px)
+        font-size: 24px
+        margin-bottom: 15px
+    @media (max-width: 575px)
+        font-size: 22px
+    &.small
+        font-weight: 500
+        font-size: 44px
+        @media (max-width: 1779px)
+            font-size: 36px
+        @media (max-width:1551px)
+            font-size: 30px
+        @media (max-width: 1199px)
+            font-size: 24px
+        @media (max-width: 767px)
+            font-size: 20px
+        @media (max-width: 575px)
+            font-size: 18px
+        strong
+            font-weight: 500
+            color: $basecolor
+    small
+        margin: 0 0 25px
+        background: linear-gradient(90deg, #0089CF 0%, #A6CE39 100%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        background-clip: text
+        text-fill-color: transparent
+        letter-spacing: 0.4em
+        font-weight: 400
+        font-size: 22px
+        display: inline-block
+        @media (max-width: 1779px)
+            font-size: 19px
+        @media (max-width:1551px)
+            letter-spacing: 0.3em
+            font-size: 16px
+        @media (max-width:1199px)
+            font-size: 14px
+        @media (max-width:767px)
+            letter-spacing: 0.2em
+            font-size: 13px
+    strong
+        display: block
+        font-weight: 600
+.btns
+    padding: 13px 20px
+    font-size: 16px
+    font-weight: 400
+    color: $titlecolor
+    border-radius: 5px
+    min-width: 184px
+    background: $gradient
+    text-align: center
+    justify-content: center
+    display: inline-flex
+    position: relative
+    z-index: 2
+    transition: all .4s ease-in-out
+    @media (max-width: 1779px)
+        font-size: 15px
+        min-width: 152px
+        padding: 11px 15px
+    @media (max-width: 1551px)
+        min-width: 130px
+        font-size: 14px
+        padding: 8px 12px
+    @media (max-width:1199px)
+        padding: 8px 10px
+        min-width: 115px
+    &::before
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        margin: 1px
+        border-radius: 4px
+        background: $white
+        width: calc(100% - 2px)
+        height: calc(100% - 2px)
+        transition: all .4s ease-in-out
+        transform: scale(0)
+        z-index: -1
+    &:hover
+        &::before
+            transform: scale(1)
+    &.blue-bdr
+        gap: 14px
+        color: $titlecolor
+        background: transparent
+        border: 1px solid $basecolor
+        align-items: center
+        &::before
+            background: $basecolor
+        &:hover
+            color: $white
+            i
+                img
+                    filter: brightness(0) invert(1)
+        i
+            display: flex
+            min-width: 18px
+            width: 18px
+            height: 18px
+            img
+                transition: all .4s ease-in-out
+                filter: brightness(0)
+    &.bdr
+        &::before
+            transform: scale(1)
+        &:hover
+            &::before
+                transform: scale(0)
+    &.white
+        background: $white
+        color: $titlecolor
+        &::before
+            background: $titlecolor
+        &:hover
+            color: $white

@@ -1,0 +1,238 @@
+.product_listing
+    margin: 0
+    padding: 0 0 5px
+    .lft-tab
+        .scroll
+            @media (max-width:767px)
+                overflow-x: auto
+                scrollbar-width: thin
+                scrollbar-color: $basecolor rgba(0,0,0,0)
+                text-align: center
+                // display: none
+        .nav-tabs
+            margin: 0
+            padding: 30px 30px 0 0
+            display: flex
+            flex-direction: column
+            border: none
+            @media (max-width:1779px)
+                padding-top: 20px
+            @media (max-width:1551px)
+                padding-top: 15px
+            @media (max-width:1199px)
+                padding-top: 10px
+            @media (max-width:767px)
+                padding-right: 0
+                padding-top: 0
+                gap: 20px
+                display: inline-flex
+                flex-direction: row
+                flex-wrap: nowrap
+                white-space: nowrap
+            .nav-item
+                margin: 0 0 20px
+                font-size: 22px
+                font-weight: 600
+                color: #1E1E1E
+                @media (max-width:1779px)
+                    font-size: 19px
+                    margin-bottom: 17px
+                @media (max-width:1551px)
+                    font-size: 17px
+                @media (max-width:1199px)
+                    margin-bottom: 14px
+                    font-size: 15px
+                @media (max-width:991px)
+                    margin-bottom: 10px
+                    font-size: 14px
+                &:last-child
+                    margin-bottom: 0
+                .nav-link
+                    color: #1E1E1E
+                    position: relative
+                    border: none
+                    box-shadow: none
+                    padding: 0
+                    border-radius: 0
+                    &::before
+                        content: ""
+                        position: absolute
+                        top: 12px
+                        right: -40px
+                        height: 11px
+                        width: 17px
+                        background: url(../images/gradient-arrow.svg) center center no-repeat
+                        background-size: 100% 100%
+                        transform: translateX(-5px)
+                        opacity: 0
+                        transition: all .4s ease-in-out
+                        @media (max-width:1779px)
+                            top: 10px
+                        @media (max-width:1551px)
+                            right: -35px
+                            height: 10px
+                            width: 14px
+                            top: 8px
+                        @media (max-width:1199px)
+                            top: 7px
+                        @media (max-width:991px)
+                            right: -25px
+                            height: 9px
+                            width: 12px
+                        @media (max-width:767px)
+                            display: none   
+                    &.active
+                        background: linear-gradient(90deg, #0089CF 0%, #A6CE39 100%)
+                        -webkit-background-clip: text
+                        -webkit-text-fill-color: transparent
+                        background-clip: text
+                        text-fill-color: transparent
+                        &::before
+                            transform: none
+                            opacity: 1
+    .right-dtl
+        margin: 0
+        padding: 95px 0 75px 70px
+        position: relative
+        @media (max-width:1779px)
+            padding: 80px 0 65px 50px
+        @media (max-width:1551px)
+            padding: 65px 0 55px 45px
+        @media (max-width:1199px)
+            padding: 50px 0 50px 40px
+        @media (max-width:991px)
+            padding: 40px 0 40px 30px
+        @media (max-width:767px)
+            padding: 30px 0
+        @media (max-width:575px)
+            padding: 30px 0 60px
+        &::before
+            content: ""
+            position: absolute
+            top: 0
+            left: -30px
+            height: 100%
+            width: 75vw
+            background: linear-gradient(90deg, #0089CF 0%, #A6CE39 100%)
+            opacity: 0.1
+            pointer-events: none
+            @media (max-width:1551px)
+                left: -20px
+            @media (max-width:1199px)
+                left: 0
+            @media (max-width:767px)
+                left: -15px
+                width: 100vw            
+        .curve
+            position: absolute
+            width: 362px
+            opacity: 0.1
+            bottom: -22px
+            left: 50%
+            transform: translateX(-50%)
+            z-index: -1
+            @media (max-width:1779px)
+                width: 295px
+            @media (max-width:1551px)
+                width: 242px
+            @media (max-width:1199px)
+                width: 170px
+            @media (max-width:991px)
+                width: 140px
+            @media (max-width:767px)
+                display: none
+        .tab-dtl
+            .grid
+                display: grid
+                grid-template-columns: 1fr 580px
+                grid-column-gap: 60px
+                @media (max-width:1779px)
+                    grid-template-columns: 1fr 465px
+                @media (max-width:1551px)
+                    grid-template-columns: 1fr 390px
+                @media (max-width:1199px)
+                    grid-column-gap: 40px
+                    grid-template-columns: 1fr 300px
+                @media (max-width:991px)
+                    grid-column-gap: 30px
+                    grid-template-columns: 1fr 210px
+                @media (max-width:575px)
+                    display: flex
+                    flex-direction: column-reverse
+            .dtl
+                padding: 40px 60px 0 0
+                @media (max-width:1779px)
+                    padding: 32px 0 0 0
+                @media (max-width:1551px)
+                    padding-top: 25px
+                @media (max-width:1199px)
+                    padding-top: 15px
+                .global_title
+                    overflow: hidden
+                    width: 100%
+                    display: -webkit-box
+                    -webkit-line-clamp: 2
+                    -webkit-box-orient: vertical
+                    @media (max-width:1199px)
+                        margin-bottom: 12px
+                p
+                    font-weight: 300
+                    margin-bottom: 30px
+                    overflow: hidden
+                    width: 100%
+                    display: -webkit-box
+                    -webkit-box-orient: vertical
+                    -webkit-line-clamp: 10
+                    @media (max-width:1551px)
+                        font-size: 13px
+                        margin-bottom: 25px
+                    @media (max-width:1199px)
+                        -webkit-line-clamp: 7
+            figure
+                margin: 0
+                padding: 0
+                border-radius: 12px
+                overflow: hidden
+                height: 584px
+                @media (max-width:1779px)
+                    height: 470px
+                @media (max-width:1551px)
+                    height: 390px
+                @media (max-width:1199px)
+                    height: 320px
+                @media (max-width:991px)
+                    height: 294px
+                @media (max-width:575px)
+                    height: 300px
+                    margin-bottom: 10px
+                &:hover 
+                    img
+                        transform: scale3d(1.1, 1.1, 1.1)
+                img
+                    height: 100%
+                    width: 100%
+                    object-fit: cover
+                    transition: all 1.5s cubic-bezier(0, 0, 0.2, 1)
+    .tab-pagination
+        position: absolute
+        bottom: 55px
+        display: flex
+        gap: 2px
+        @media (max-width:1779px)
+            bottom: 50px
+        @media (max-width:991px)
+            bottom: 30px
+        @media (max-width:767px)
+            bottom: 20px
+            left: 50%
+            transform: translateX(-50%)
+        @media (max-width:575px)
+            bottom: 25px
+        .tab-dot
+            height: 4px
+            width: 24px
+            background: #D4D4D4
+            transition: all .4s ease-in-out
+            border-radius: 10px
+            &.active
+                background: $black
