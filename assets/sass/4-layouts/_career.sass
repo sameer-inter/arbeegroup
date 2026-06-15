@@ -524,7 +524,6 @@
         padding: 20px 15px
     &:hover
         background: $white
-        margin-left: -1px
         z-index: 3
         @media (max-width: 767px)
             margin-left: 0
@@ -544,12 +543,12 @@
     &::before
         content: ""
         top: 0
-        left: 0
+        left: -1px
         position: absolute
         right: 0
         bottom: 0
         height: 100%
-        width: 100%
+        width: calc( 100% + 1px )
         border-radius: 0
         z-index: -1
         opacity: 0
@@ -847,8 +846,9 @@
                 background: transparent
                 border: 1px solid rgba($text, 50%)
                 &::before
-                    background: rgba($text, 50%)
+                    background: $basecolor
                 &:hover
+                    border-color: $basecolor
                     color: $white
     .row
         --bs-gutter-x: 15px

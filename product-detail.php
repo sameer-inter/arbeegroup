@@ -530,8 +530,8 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
-                                    <div class="form-group phone">
-                                        <div class="input-group">
+                                    <div class="form-group">
+                                        <div class="input-group phone">
                                             <input type="tel" id="mobile_code" name="mobile_code" class="form-control" placeholder="Phone Number *">
                                         </div>
                                     </div>
@@ -603,7 +603,7 @@
             arrows: true,
             fade: true,
             rtl: isRTL,
-            infinite: false,
+            infinite: true,
             asNavFor: '.thumbnail-slider'
         });
 
@@ -613,7 +613,7 @@
             asNavFor: '.main-slider',
             centerMode: false,
             focusOnSelect: true,
-            infinite: false,
+            infinite: true,
             rtl: isRTL,
             swipe: thumbCount > 4,
             draggable: thumbCount > 4,

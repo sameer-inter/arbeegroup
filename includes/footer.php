@@ -52,7 +52,7 @@
                 <img loading="lazy" src="assets/images/ftr_curve.svg" alt="curve img">
             </div>
             <div class="row flex-column-reverse flex-md-row">
-                <div class="col-xl-4 col-md-3">
+                <div class="col-xl-4 col-md-3 d-none d-md-block">
                     <div class="ftr-blk prod">
                         <h3 class="navTitle"><span>Our Products</span></h3>
                         <ul class="ftr_link ftr_wrp">
@@ -64,7 +64,17 @@
                 </div>
                 <div class="col-xl-8 col-md-9">
                     <div class="row">
-                        <div class="col-md-4 order-md-0 order-2">
+                        <div class="col-xl-4 col-md-3 order-md-0 order-2 d-block d-md-none">
+                            <div class="ftr-blk prod">
+                                <h3 class="navTitle"><span>Our Products</span></h3>
+                                <ul class="ftr_link ftr_wrp">
+                                    <li><a href="product-detail.php">Omega-3 Oil</a></li>
+                                    <li><a href="product-detail.php">Fish Meal</a></li>
+                                    <li><a href="product-detail.php">Fish Oil</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4 order-md-0 order-3">
                             <div class="ftr-blk">
                                 <h3 class="navTitle"><span>Contact us</span></h3>
                                 <div class="ftr_wrp">
@@ -79,7 +89,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3 order-md-0 order-3">
+                        <div class="col-md-3 order-md-0 order-4">
                             <div class="ftr-blk ps-xl-5 ps-md-3">
                                 <h3 class="navTitle"><span>Quick Links</span></h3>
                                 <ul class="ftr_link ftr_wrp">
@@ -145,41 +155,46 @@
     <a href="javascript:void(0)" id="return-to-top"><span>❯</span></a>
 </footer>
 
+<!-- Fancy Select -->
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+<!-- Number Input --->
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"></script>
 
 <!-- BOOTSTRAP -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-    window.setTimeout(function() {
-        // BOOTSTRAP CSS
-        const link = document.createElement('link');
-        link.href =
-            "https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css";
-        link.rel = "stylesheet";
-        link.integrity =
-            'sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB';
-        link.referrerPolicy = 'no-referrer';
-        link.crossOrigin = 'anonymous';
-        var appStylesheet = document.getElementById('AppStyle');
-        document.head.insertBefore(link, appStylesheet);
+    document.addEventListener("DOMContentLoaded", function() {
+        window.setTimeout(function() {
+            // BOOTSTRAP CSS
+            const link = document.createElement('link');
+            link.href =
+                "https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css";
+            link.rel = "stylesheet";
+            link.integrity =
+                'sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB';
+            link.referrerPolicy = 'no-referrer';
+            link.crossOrigin = 'anonymous';
+            var appStylesheet = document.getElementById('AppStyle');
+            document.head.insertBefore(link, appStylesheet);
 
-        // WOW JS
-        const script = document.createElement('script');
-        script.src = "https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js";
-        script.integrity =
-            'sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==';
-        script.referrerPolicy = 'no-referrer';
-        script.crossOrigin = 'anonymous';
-        script.defer = true;
-        script.id = 'WowJs';
+            // WOW JS
+            const script = document.createElement('script');
+            script.src = "https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js";
+            script.integrity =
+                'sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==';
+            script.referrerPolicy = 'no-referrer';
+            script.crossOrigin = 'anonymous';
+            script.defer = true;
+            script.id = 'WowJs';
 
-        script.onload = function() {
-            initializeWowJs();
-        };
+            script.onload = function() {
+                initializeWowJs();
+            };
 
-        document.head.appendChild(script);
-    }, 3000);
-});
+            document.head.appendChild(script);
+        }, 3000);
+    });
 </script>
 <script>
 // WOW
@@ -270,12 +285,6 @@ $('#return-to-top').click(function() {
 
 <!-- CUSTOM -->
 <script id="AppJs" src="assets/js/app.min.js?v=1.0.0" defer></script>
-
-<!-- Fancy Select -->
-<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-
-<!-- Number Input --->
-<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"></script>
 
 
 

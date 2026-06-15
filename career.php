@@ -72,7 +72,7 @@
                 <div class="build-nav owl-nav"></div>
             </div>
             <div class="text-center">
-                <a href="#" class="btns">View Latest Opennings</a>
+                <a href="#opportunity" class="btns">View Latest Opennings</a>
             </div>
         </div>
     </section>
@@ -179,7 +179,7 @@
     </section>
 
     <!-- Opportunity -->
-    <section class="opportunity_sec">
+    <section class="opportunity_sec" id="opportunity">
         <div class="container">
             <div class="title-wrp">
                 <h2 class="global_title">Current Opportunities</h2>
@@ -273,7 +273,7 @@
             <div class="modal-content">
                 <div class="modal-body">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    <h3>Apply  Now</h3>
+                    <h3>Apply Now</h3>
                     <p>Submit your application for the Motorhome Sales Specialist position</p>
                     <div class="row">
                         <div class="col-sm-6">
@@ -319,7 +319,7 @@
                         </div>
                         <div class="col-12">
                             <div class="d-flex">
-                                <button class="btns txt-bdr" type="submit">Send Application</button>
+                                <button class="btns txt-bdr" type="submit">Cancel</button>
                                 <button class="btns" type="submit">Send Application</button>
                             </div>
                         </div>
@@ -442,5 +442,28 @@
         }
     });
 </script>
+
+<!-- Opportunity -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll(".build_sec .btns");
+        navLinks.forEach(link => {
+            link.addEventListener("click", function (e) {
+                e.preventDefault();
+                navLinks.forEach(nav => nav.classList.remove("active"));
+                this.classList.add("active");
+                const targetId = this.getAttribute("href").substring(1);
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: "smooth"
+                    });
+                }
+                history.pushState("", document.title, window.location.pathname + window.location.search);
+            });
+        });
+    });
+</script>
+
 
 <?php include "./includes/footer.php" ?>

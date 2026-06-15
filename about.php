@@ -268,66 +268,98 @@
         speed: 1200,
         autoHeight: true
     });
+
     const years = document.querySelectorAll('.year');
     const arc = document.querySelector('.timeline-arc');
+
     years.forEach((item, index) => {
         item.classList.add(`pos${index + 1}`);
     });
+
     const stepAngle = -25.5;
     let currentIndex = 0;
     let autoplay;
     let restartTimer;
+
     function updateTimeline(activeIndex) {
         years.forEach((item, index) => {
             item.classList.toggle('active', index === activeIndex);
         });
+
         if (window.innerWidth > 991) {
             arc.style.transform = `rotate(${activeIndex * stepAngle}deg)`;
         } else {
             arc.style.transform = 'none';
+
             const activeYear = years[activeIndex];
+
+            let scrollPos =
+                activeYear.offsetLeft -
+                (arc.clientWidth / 2) +
+                (activeYear.offsetWidth / 2);
+
+            const maxScroll = arc.scrollWidth - arc.clientWidth;
+
+            // Prevent extra space at start/end
+            scrollPos = Math.max(0, Math.min(scrollPos, maxScroll));
+
             arc.scrollTo({
-                left: activeYear.offsetLeft - (arc.offsetWidth / 2) + (activeYear.offsetWidth / 2),
+                left: scrollPos,
                 behavior: 'smooth'
             });
         }
+
+        currentIndex = activeIndex;
+
         if (swiper.activeIndex !== activeIndex) {
             swiper.slideTo(activeIndex);
         }
-        currentIndex = activeIndex;
     }
+
     function startAutoplay() {
         clearInterval(autoplay);
+
         autoplay = setInterval(() => {
             currentIndex++;
+
             if (currentIndex >= years.length) {
                 currentIndex = 0;
             }
+
             updateTimeline(currentIndex);
         }, 5000);
     }
+
     function pauseAutoplay() {
         clearInterval(autoplay);
         clearTimeout(restartTimer);
+
         restartTimer = setTimeout(() => {
             startAutoplay();
         }, 4000);
     }
+
     years.forEach((item, index) => {
         item.addEventListener('click', () => {
             updateTimeline(index);
             pauseAutoplay();
         });
     });
+
     swiper.on('slideChange', () => {
-        currentIndex = swiper.activeIndex;
-        updateTimeline(currentIndex);
+        const activeIndex = swiper.activeIndex;
+
+        if (activeIndex !== currentIndex) {
+            updateTimeline(activeIndex);
+        }
     });
+
     window.addEventListener('resize', () => {
         updateTimeline(currentIndex);
     });
+
     updateTimeline(0);
-    /* startAutoplay(); */
+    startAutoplay();
 </script>
 
 <?php include "./includes/footer.php" ?>

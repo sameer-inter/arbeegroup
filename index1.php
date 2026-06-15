@@ -33,12 +33,12 @@
             </div> -->
             <div class="item">
                 <div class="video-hero jquery-background-video-wrapper demo-video-wrapper d-none d-md-block">
-                    <video class="jquery-background-video" autoplay muted loop playsinline webkit-playsinline preload="auto">
+                    <video class="jquery-background-video" autoplay muted loop playsinline preload="auto">
                         <source rel="preload" src="assets/videos/hero_video1.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="video-hero jquery-background-video-wrapper demo-video-wrapper d-block d-md-none">
-                    <video class="jquery-background-video" autoplay muted loop playsinline webkit-playsinline preload="auto">
+                    <video class="jquery-background-video" autoplay muted loop playsinline preload="auto">
                         <source rel="preload" src="assets/videos/hero_video1.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -98,22 +98,22 @@
                 </div>
                 <div class="rgt-vid">
                     <div class="video-box">
-                        <video class="jquery-background-video" autoplay muted loop playsinline webkit-playsinline>
+                        <video class="jquery-background-video" autoplay muted loop playsinline>
                             <source src="assets/videos/welcome_vid1.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="video-box">
-                        <video class="jquery-background-video" autoplay muted loop playsinline webkit-playsinline>
+                        <video class="jquery-background-video" autoplay muted loop playsinline>
                             <source src="assets/videos/welcome_vid2.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="video-box">
-                        <video class="jquery-background-video" autoplay muted loop playsinline webkit-playsinline>
+                        <video class="jquery-background-video" autoplay muted loop playsinline>
                             <source src="assets/videos/welcome_vid3.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="video-box">
-                        <video class="jquery-background-video" autoplay muted loop playsinline webkit-playsinline>
+                        <video class="jquery-background-video" autoplay muted loop playsinline>
                             <source src="assets/videos/welcome_vid4.mp4" type="video/mp4">
                         </video>
                     </div>

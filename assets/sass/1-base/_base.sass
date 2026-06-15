@@ -171,7 +171,11 @@ iframe
                 width: 8px
                 height: 5px
                 transform: rotate(180deg)
+                transition: all .4s ease-in-out
                 filter: brightness(0)
+            &.iti__arrow--up
+                &::before
+                    transform: rotate(0deg)
         .iti__selected-flag
             border-radius: 5px
             padding: 9px 20px
@@ -654,7 +658,7 @@ ol
         font-size: 44px
         margin-bottom: 20px
     @media (max-width: 1551px)
-        font-size: 38px
+        font-size: 36px
     @media (max-width:1199px)
         font-size: 32px
     @media (max-width: 991px)
@@ -695,7 +699,7 @@ ol
             font-size: 19px
         @media (max-width:1551px)
             letter-spacing: 0.3em
-            font-size: 16px
+            font-size: 15px
         @media (max-width:1199px)
             font-size: 14px
         @media (max-width:767px)

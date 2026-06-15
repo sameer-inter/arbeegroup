@@ -61,13 +61,32 @@
                                         </a>
                                     </div>
                                 </div>
-                                <div class="accordion-item">
+                                <!-- <div class="accordion-item">
                                     <div class="accordion-header">
                                         <a href="#"
                                             class="accordion-button <?= basename($_SERVER["SCRIPT_FILENAME"], '.php') == '' ? ' active' : '' ?>"
                                             aria-label="Subsidiaries button">
                                             <span>SUBSIDIARIES</span>
                                         </a>
+                                    </div>
+                                </div> -->
+                                <div class="accordion-item hasAcco">
+                                    <div class="accordion-header">
+                                        <a href="#" class="accordion-button" aria-label="nav">
+                                            <span id="dropdown1">SUBSIDIARIES</span>
+                                        </a>
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"
+                                            aria-labelledby="dropdown1"></button>
+                                    </div>
+                                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="dropdown1"
+                                        data-bs-parent="#AccordMenu">
+                                        <div class="accordion-body">
+                                            <ul class="submenu">
+                                                <li><a href="#">SUBSIDIARIES</a></li>
+                                                <li><a href="#">SUBSIDIARIES</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
@@ -164,11 +183,27 @@
                                         </a>
                                     </div>
                                 </div>
-                                <div class="accordion-item">
+                                <!-- <div class="accordion-item">
                                     <div class="accordion-header">
                                         <a href="#" class="accordion-button" aria-label="Subsidiaries button">
                                             <span>Subsidiaries</span>
                                         </a>
+                                    </div>
+                                </div> -->
+                                <div class="accordion-item hasAcco">
+                                    <div class="accordion-header">
+                                        <a href="#" class="accordion-button">
+                                            <span id="menu2_dropdown5">Subsidiaries</span>
+                                        </a>
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#menu2_collapseFive" aria-controls="menu2_collapseFive" aria-labelledby="menu2_dropdown5"></button>
+                                    </div>
+                                    <div id="menu2_collapseFive" class="accordion-collapse collapse" aria-labelledby="menu2_dropdown5" data-bs-parent="#menu2_AccordMenu">
+                                        <div class="accordion-body">
+                                            <ul class="submenu">
+                                                <li><a href="#">SUBSIDIARIES</a></li>
+                                                <li><a href="#">SUBSIDIARIES</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
@@ -263,6 +298,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+</script>
+
+<!-- Close Menu -->
+<script>
+    document.addEventListener('click', function (e) {
+        const nav = document.getElementById('CNavPOP');
+        const navWrap = nav.querySelector('.cNavWrap');
+        if (
+            nav.classList.contains('show') &&
+            !navWrap.contains(e.target) &&
+            !e.target.closest('.cNacBtn')
+        ) {
+            nav.classList.remove('show');
+            document.querySelectorAll('.cNacBtn').forEach(btn => {
+                btn.classList.remove('open');
+            });
+            document.body.classList.remove('cPop-open');
+        }
+    });
 </script>
 
 <div id="viewport">
